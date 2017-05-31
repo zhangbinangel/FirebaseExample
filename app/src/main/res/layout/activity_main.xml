@@ -7,39 +7,10 @@
     android:orientation="vertical"
     tools:context="com.mushan.firebase.MainActivity"
     android:background="@android:color/darker_gray">
-    <!--<LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="#000000">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="back"
-            android:textSize="25dp"
-            android:textColor="@android:color/white"
-            android:layout_marginLeft="10dp"/>
-    </LinearLayout>-->
     <ListView
         android:id="@+id/blog_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:divider="#00000000"
        ></ListView>
-    <!--<include layout="@layout/blog_detail"></include>
-
-    <include layout="@layout/blog_bottom"></include>
-
-
-    <Button
-        android:id="@+id/show_banner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/show_banner"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="64dp"
-        android:layout_marginStart="8dp"/>
--->
 </LinearLayout>

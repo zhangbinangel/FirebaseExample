@@ -34,8 +34,6 @@ public class MyListAdapter extends BaseAdapter{
         this.mDataList = list;
         this.mContext = context;
         mAdRequest = new AdRequest.Builder()
-                //.addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
-                .addTestDevice("BB2011217CD316B7429C42FAEB1F15F1")
                 .build();
 
     }
