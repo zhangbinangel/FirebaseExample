@@ -1,0 +1,67 @@
+<p style="color:#333333;font-family:Arial;font-size:14px;background-color:#FFFFFF;">
+    在<a target="_blank" href="http://www.41443.com/HTML/Delphi/20121118/30875.html">开发</a><a target="_blank" href="http://www.41443.com/HTML/Android/20121123/62709.html">Android</a><a target="_blank" href="http://www.41443.com/HTML/ITzixun/ITzixun/2014/1225/260311.html">Wear</a>应用过程中需要对手表和手机进行<a target="_blank" href="http://www.41443.com/HTML/ITzixun/ITzixun/2015/0124/296567.html">同时</a><a target="_blank" href="http://www.41443.com/HTML/luyouqi/20121117/28656.html">操作</a>，可以通过<a target="_blank" href="http://www.41443.com/HTML/Android/20141207/225256.html">蓝牙</a><a target="_blank" href="http://www.41443.com/HTML/ITzixun/ITzixun/2015/0124/296567.html">同时</a>对手机和手表进行<a target="_blank" href="http://www.41443.com/HTML/luyouqi/20121117/28656.html">操作</a>。
+</p>
+<p style="color:#333333;font-family:Arial;font-size:14px;background-color:#FFFFFF;">
+    1 打开手表和手机的<a target="_blank" href="http://www.41443.com/HTML/xitonganquan/20121127/67778.html">调试</a>设置
+</p>
+<p style="color:#333333;font-family:Arial;font-size:14px;background-color:#FFFFFF;">
+    打开手机的usb<a target="_blank" href="http://www.41443.com/HTML/xitonganquan/20121127/67778.html">调试</a>
+</p>
+<p style="color:#333333;font-family:Arial;font-size:14px;background-color:#FFFFFF;">
+    打开手表设置的<a target="_blank" href="http://www.41443.com/HTML/Delphi/20121118/30875.html">开发</a>者选项，选中Debug over Bluetooth 如果是首次<a target="_blank" href="http://www.41443.com/HTML/Linux/20130110/125053.html">使用</a>手表调试，需要在Setting中找到About，单击7次打开开发者选项
+</p>
+<p style="color:#333333;font-family:Arial;font-size:14px;background-color:#FFFFFF;">
+    2 连接手表到开发工具
+</p>
+<p style="color:#333333;font-family:Arial;font-size:14px;background-color:#FFFFFF;">
+    在手机端打开<a target="_blank" href="http://www.41443.com/HTML/Android/20121123/62709.html">Android</a><a target="_blank" href="http://www.41443.com/HTML/ITzixun/ITzixun/2014/1225/260311.html">Wear</a>&nbsp;App，进入Setting，选中Debugging over Bluetooth，会发现当前状态是
+</p>
+<p style="color:#333333;font-family:Arial;font-size:14px;background-color:#FFFFFF;">
+    Host: disconnectedTarget: connected打开cmd，依次键入如下命令
+</p>
+<p style="color:#333333;font-family:Arial;font-size:14px;background-color:#FFFFFF;">
+    adb forward tcp:4444 localabstract:/adb-hub&nbsp;
+</p>
+<p style="color:#333333;font-family:Arial;font-size:14px;background-color:#FFFFFF;">
+    adb connect localhost:4444看到状态
+</p>
+<p style="color:#333333;font-family:Arial;font-size:14px;background-color:#FFFFFF;">
+    Host: connectedTarget: connected则表示成功了。
+</p>
+<p style="color:#333333;font-family:Arial;font-size:14px;background-color:#FFFFFF;">
+    <br />
+</p>
+<p style="color:#333333;font-family:Arial;font-size:14px;background-color:#FFFFFF;">
+    注意：
+</p>
+<p style="color:#333333;font-family:Arial;font-size:14px;background-color:#FFFFFF;">
+    如果连接出现unable to connect to localhost:4444: cannot connect to localhost:4444: 由于目标<br />
+    计算机积极拒绝，无法连接。 (10061)
+</p>
+<p style="color:#333333;font-family:Arial;font-size:14px;background-color:#FFFFFF;">
+    <br />
+</p>
+<p style="color:#333333;font-family:Arial;font-size:14px;background-color:#FFFFFF;">
+    解决方法：
+</p>
+<p style="color:#333333;font-family:Arial;font-size:14px;background-color:#FFFFFF;">
+    adb forward --remove tcp:4444
+</p>
+<p style="color:#333333;font-family:Arial;font-size:14px;background-color:#FFFFFF;">
+    adb forward tcp:4444 localabstract:/adb-hub
+</p>
+<p style="color:#333333;font-family:Arial;font-size:14px;background-color:#FFFFFF;">
+    adb connect localhost:4444
+</p>
+<p style="color:#333333;font-family:Arial;font-size:14px;background-color:#FFFFFF;">
+    <br />
+</p>
+<p style="color:#333333;font-family:Arial;font-size:14px;background-color:#FFFFFF;">
+    如果还不成功：
+</p>
+<p style="color:#333333;font-family:Arial;font-size:14px;background-color:#FFFFFF;">
+    最后一步改为：
+</p>
+<p style="color:#333333;font-family:Arial;font-size:14px;background-color:#FFFFFF;">
+    adb connect 127.0.0.1:4444
+</p>

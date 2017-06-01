@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "670551007700",
+    "firebase_url": "https://fir-demo-ac858.firebaseio.com",
+    "project_id": "fir-demo-ac858",
+    "storage_bucket": "fir-demo-ac858.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:670551007700:android:7d49662110e6a880",
+        "android_client_info": {
+          "package_name": "com.mushan.firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "670551007700-hdffmap1dme09ei6u0gu7tntl4jqs735.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDST92rzF_K07ObCjzKpU4dEaai0fBAzYw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

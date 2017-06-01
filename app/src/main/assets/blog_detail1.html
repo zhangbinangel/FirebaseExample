@@ -1,0 +1,1161 @@
+<h2>
+    拥抱Firebase，Firebase之Realtime Database。
+</h2>
+<p>
+    一林三
+</p>
+<p>
+<p>
+    <br />
+</p>
+<p>
+    <br />
+</p>
+<p style="text-align:center;">
+    <img src="https://mmbiz.qlogo.cn/mmbiz/cZV2hRpuAPiaJQXWGyC9wrUzIicibgXayrgibTYarT3A1yzttbtaO0JlV21wMqroGYT3QtPq2C7HMYsvicSB2p7dTBg/0?" title="音符" style="height:auto !important;" />
+</p>
+<p style="font-family:微软雅黑;font-size:16px;color:#3E3E3E;text-align:center;">
+    <br />
+</p>
+<span style="color:#0052FF;font-size:20px;"><strong>Firebase可以帮助您构建更出色的移动应用并扩展您的业务。</strong></span>
+<p style="font-family:微软雅黑;font-size:16px;">
+    <br />
+</p>
+<img src="https://mmbiz.qlogo.cn/mmbiz_png/fgnkxfGnnkTMNtGy7KWfCrdJibAYY6HtIeOpQc0iaRNeAWWoBHNsMZEFmY9TtQEfWKdwdTWLuslYLTaH9qxs4NXQ/0?" style="height:auto !important;width:50px;" /><span style="color:#7F7F7F;font-size:15px;">如何工作？</span>
+<p style="font-family:微软雅黑;font-size:16px;color:#3E3E3E;">
+    <span style="color:#212121;">Firebase Realtime Database 允许直接从客户端代码中直接安全访问数据库，因此您能够构建丰富的协作式应用。 数据保留在本地，即使处于离线状态，实时事件仍继续触发，给最终用户提供一种响应式体验。当设备重新取得连接时， Realtime Database 会将本地数据变化与客户端离线期间发生的远程更新同步，自动合并任何不一致数据。</span>
+</p>
+<p style="font-family:微软雅黑;font-size:16px;color:#3E3E3E;">
+    <br />
+</p>
+<p style="font-family:微软雅黑;font-size:16px;color:#3E3E3E;">
+    <br />
+</p>
+<p>
+    <img src="https://mmbiz.qlogo.cn/mmbiz_gif/FO6AVvu3Kx2nprJNE8lAbZx3B4T4KnWHHicehXpIjpcqEowTmibriadnPCQj8p6tfDSDlQiccAYVCibTVL2kiak1LibOA/0?wx_fmt=gif" style="height:auto !important;" />
+</p>
+<p style="text-align:center;">
+    <br />
+</p>
+<p style="font-family:微软雅黑;font-size:16px;color:#3E3E3E;">
+    <br />
+</p>
+<img src="https://mmbiz.qlogo.cn/mmbiz_png/fgnkxfGnnkTMNtGy7KWfCrdJibAYY6HtIeOpQc0iaRNeAWWoBHNsMZEFmY9TtQEfWKdwdTWLuslYLTaH9qxs4NXQ/0?" style="height:auto !important;width:50px;" /><span style="color:#7F7F7F;font-size:15px;">实现步骤</span>
+<ol class=" list-paddingleft-2" style="font-family:微软雅黑;font-size:16px;">
+    <li>
+        <p style="color:#3E3E3E;">
+            <span style="color:#212121;font-size:14px;background-color:rgba(255, 255, 255, 0.95);">集成 Firebase Realtime Database SDK。</span>
+        </p>
+        <p style="color:#3E3E3E;">
+            <span style="color:#212121;font-size:14px;background-color:rgba(255, 255, 255, 0.95);"><span style="color:rgba(0, 0, 0, 0.54);">通过 Gradle、CococaPods 或脚本包含来快速包含客户端。</span></span>
+        </p>
+    </li>
+    <li>
+        <p style="color:#3E3E3E;">
+            <span style="color:#212121;font-size:14px;background-color:rgba(255, 255, 255, 0.95);">创建 Realtime Database 引用。</span>
+        </p>
+        <p style="color:#3E3E3E;">
+            <span style="color:#212121;font-size:14px;background-color:rgba(255, 255, 255, 0.95);"><span style="color:rgba(0, 0, 0, 0.54);">为设置数据或订阅数据变化，请引用您的 JSON 数据，如"users/user:1234/phone_number"。</span></span>
+        </p>
+    </li>
+    <li>
+        <p style="color:#3E3E3E;">
+            <span style="color:#212121;font-size:14px;background-color:rgba(255, 255, 255, 0.95);">设置数据和侦听变化。</span>
+        </p>
+        <p style="color:#3E3E3E;">
+            <span style="color:#212121;font-size:14px;background-color:rgba(255, 255, 255, 0.95);"><span style="color:rgba(0, 0, 0, 0.54);">使用此引用写入数据或订阅变化。</span></span>
+        </p>
+    </li>
+    <li>
+        <p style="color:#3E3E3E;">
+            <span style="color:#212121;font-size:14px;background-color:rgba(255, 255, 255, 0.95);">启用离线留存。</span>
+        </p>
+        <p style="color:#3E3E3E;">
+            <span style="color:#212121;font-size:14px;background-color:rgba(255, 255, 255, 0.95);"><span style="color:rgba(0, 0, 0, 0.54);">允许将数据写入到设备的本地磁盘，以便离线时使用。</span></span>
+        </p>
+    </li>
+    <li>
+        <p style="color:#3E3E3E;">
+            <span style="color:#212121;font-size:14px;background-color:rgba(255, 255, 255, 0.95);">保障数据安全。</span>
+        </p>
+        <p style="color:#3E3E3E;">
+            <span style="color:#212121;font-size:14px;background-color:rgba(255, 255, 255, 0.95);"><span style="color:rgba(0, 0, 0, 0.54);">使用 Firebase Realtime Database 安全规则保障您的数据安全。</span></span>
+        </p>
+    </li>
+</ol>
+<p style="font-family:微软雅黑;font-size:16px;color:#3E3E3E;text-align:center;">
+    <br />
+</p>
+<p style="font-family:微软雅黑;font-size:16px;color:#3E3E3E;text-align:center;">
+    <br />
+</p>
+<img src="https://mmbiz.qlogo.cn/mmbiz_png/fgnkxfGnnkTMNtGy7KWfCrdJibAYY6HtIeOpQc0iaRNeAWWoBHNsMZEFmY9TtQEfWKdwdTWLuslYLTaH9qxs4NXQ/0?" style="height:auto !important;width:50px;" /><span style="color:#7F7F7F;font-size:15px;">实操一下又何妨</span>
+<ol class=" list-paddingleft-2" style="font-family:微软雅黑;font-size:16px;">
+    <li>
+        <p>
+            Install the Firebase SDK.
+        </p>
+        <p>
+            见<strong><span style="color:#FF0000;">《将Firebase添加到项目》</span></strong>
+        </p>
+        <p>
+            <span style="background-color:#8DB3E2;">不会做超链接，有知道的告知下，谢谢</span>
+        </p>
+    </li>
+    <li>
+        <p>
+            <span style="background-color:#FFFFFF;">在<span style="color:#4F81BD;">Firebase控制台</span>添加一个自己的项目。</span>
+        </p>
+    </li>
+    <li>
+        <p>
+            添加依赖
+        </p>
+    </li>
+    <li>
+        <pre class="prettyprint"><span class="pln">compile </span><span class="str" style="color:#0D904F;">'com.google.firebase:firebase-database:10.2.6'</span></pre>
+    </li>
+</ol>
+<p style="font-family:微软雅黑;font-size:16px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;4. 配置Firebase Database规则
+</p>
+<p style="font-family:微软雅黑;font-size:16px;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;默认情况下，您的数据库规则会授予完全读取和写入权限，但仅授予给已通过身份验证的用户<span style="color:#212121;">。 以下为默认规则：</span>
+</p>
+<pre class="prettyprint"><span class="pun">{</span><span class="pln"> &nbsp; </span><span class="str" style="color:#0D904F;">"rules"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> &nbsp; &nbsp; </span><span class="str" style="color:#0D904F;">".read"</span><span class="pun">:</span><span class="pln"> </span><span class="str" style="color:#0D904F;">"auth != null"</span><span class="pun">,</span><span class="pln"> &nbsp; &nbsp; </span><span class="str" style="color:#0D904F;">".write"</span><span class="pun">:</span><span class="pln"> </span><span class="str" style="color:#0D904F;">"auth != null"</span><span class="pln"> &nbsp; </span><span class="pun">}</span><span class="pln"> </span><span class="pun">}</span></pre>
+<p style="font-family:微软雅黑;font-size:16px;">
+    <span style="color:#212121;"></span><span style="color:#212121;">如果您只是刚开始使用并希望在配置安全规则之前先试用数据库，则可使用以下规则授予完全的公共数据库访问权限：</span>
+</p>
+<pre class="prettyprint"><span class="pun">{</span><span class="pln"> &nbsp; </span><span class="str" style="color:#0D904F;">"rules"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> &nbsp; &nbsp; </span><span class="str" style="color:#0D904F;">".read"</span><span class="pun">:</span><span class="pln"> </span><span class="kwd" style="color:#3B78E7;">true</span><span class="pun">,</span><span class="pln"> &nbsp; &nbsp; </span><span class="str" style="color:#0D904F;">".write"</span><span class="pun">:</span><span class="pln"> </span><span class="kwd" style="color:#3B78E7;">true</span><span class="pln"> &nbsp; </span><span class="pun">}</span><span class="pln"> </span><span class="pun">}</span></pre>
+<p style="font-family:微软雅黑;font-size:16px;">
+    <span style="color:#212121;"></span><strong>在发布您的应用之前必须正确配置这些规则</strong><span style="color:#212121;">，以确保您的用户只能访问他们应该能够访问的数据。</span>
+</p>
+<p style="font-family:微软雅黑;font-size:16px;">
+		<span style="color:#212121;"><br />
+</span>
+</p>
+<p style="font-family:微软雅黑;font-size:16px;">
+    <span style="color:#212121;"></span>
+</p>
+<p style="color:#3E3E3E;text-align:center;">
+    <br />
+</p>
+<p style="color:#3E3E3E;">
+    <span style="color:#212121;">如何使用安全规则</span>保障数据安全
+</p>
+<p style="color:#3E3E3E;text-align:center;">
+    <br />
+</p>
+<img src="https://mmbiz.qlogo.cn/mmbiz_png/fgnkxfGnnkTMNtGy7KWfCrdJibAYY6HtIeOpQc0iaRNeAWWoBHNsMZEFmY9TtQEfWKdwdTWLuslYLTaH9qxs4NXQ/0?" class="" style="height:auto !important;width:50px;" /><span style="color:#7F7F7F;font-size:15px;">&nbsp;&nbsp;&nbsp;&nbsp;代码混淆</span>
+<pre class="prettyprint"><span class="com" style="color:#D81B60;"># Add this global rule</span><span class="pln"> -keepattributes </span><span class="typ" style="color:#9C27B0;">Signature</span><span class="pln"> </span><span class="com" style="color:#D81B60;"># This rule will properly ProGuard all the model classes in</span><span class="pln"> </span><span class="com" style="color:#D81B60;"># the package com.yourcompany.models. Modify to fit the structure</span><span class="pln"> </span><span class="com" style="color:#D81B60;"># of your app.</span><span class="pln"> -keepclassmembers </span><span class="kwd" style="color:#3B78E7;">class</span><span class="pln"> com.yourcompany.models.** {
+&nbsp; *;
+}</span></pre>
+<p style="color:#3E3E3E;">
+    <br />
+</p>
+<img src="https://mmbiz.qlogo.cn/mmbiz_png/fgnkxfGnnkTMNtGy7KWfCrdJibAYY6HtIeOpQc0iaRNeAWWoBHNsMZEFmY9TtQEfWKdwdTWLuslYLTaH9qxs4NXQ/0?" class="" style="height:auto !important;width:50px;" /><span style="color:#7F7F7F;font-size:15px;">组织您的数据库</span>
+<p style="color:#3E3E3E;">
+    <span style="font-size:15px;color:#212121;">构建一个结构合理的数据库需要预先进行大量计划。最重要的是，您需要对如何保存数据及之后如何检索数据做好计划，尽可能简化保存和检索的进程。</span>
+</p>
+<p style="color:#3E3E3E;">
+    <br />
+    <span style="color:#212121;font-size:15px;">所有 Firebase Realtime Database 数据都被存储为 JSON 对象。您可将该数据库视为云托管 JSON 树。 该数据库与 SQL 数据库不同，没有任何表格或记录。 当您将数据添加至 JSON 树时，它变为现有 JSON 结构中的一个节点。</span>
+</p>
+<p style="color:#3E3E3E;">
+    <br />
+</p>
+<p style="color:#3E3E3E;">
+    <span style="color:#212121;font-size:15px;">例如，假设聊天应用允许用户存储基本个人资料和联系人列表。 通常用户个人资料位于一个诸如&nbsp;/users/$uid&nbsp;之类的路径中。 用户&nbsp;alovelace&nbsp;的数据库项看起来可能如下所示：</span>
+</p>
+<pre class="prettyprint"><span class="pun">{
+&nbsp; </span><span class="str" style="color:#0D904F;">"users"</span><span class="pun">: {
+&nbsp; &nbsp; </span><span class="str" style="color:#0D904F;">"alovelace"</span><span class="pun">: {
+&nbsp; &nbsp; &nbsp; </span><span class="str" style="color:#0D904F;">"name"</span><span class="pun">: </span><span class="str" style="color:#0D904F;">"Ada Lovelace"</span><span class="pun">,
+&nbsp; &nbsp; &nbsp; </span><span class="str" style="color:#0D904F;">"contacts"</span><span class="pun">: { </span><span class="str" style="color:#0D904F;">"ghopper"</span><span class="pun">: </span><span class="kwd" style="color:#3B78E7;">true</span><span class="pln"> },
+&nbsp; &nbsp; },
+&nbsp; &nbsp; </span><span class="str" style="color:#0D904F;">"ghopper"</span><span class="pun">: { ... },
+&nbsp; &nbsp; </span><span class="str" style="color:#0D904F;">"eclarke"</span><span class="pun">: { ... }
+&nbsp; }
+}</span></pre>
+<p style="color:#3E3E3E;">
+    <span style="font-size:19px;color:#212121;">数据结构最佳做法</span><span style="color:#212121;font-size:15px;"></span>
+</p>
+<ul class=" list-paddingleft-2">
+    <li>
+        <p style="color:#3E3E3E;">
+            避免嵌套数据
+        </p>
+    </li>
+</ul>
+<p style="color:#3E3E3E;">
+    <span style="color:#212121;font-size:15px;">&nbsp;&nbsp;&nbsp;&nbsp;Firebase Realtime Database 允许嵌套数据的深度多达 32 层，但是官网文档却不建议嵌套，因为要提取数据库中某个数据时，要检索所有的子节点，另外，当向某用户授予数据库中某个节点的读写访问权时，也会将该节点下所有数据的访问权授予该用户。</span>
+</p>
+<p style="color:#3E3E3E;">
+    <span style="font-size:15px;color:#212121;">假设一个如下所示的多层嵌套结构：</span>
+</p>
+<pre class="prettyprint"><span class="pun">{
+&nbsp; </span><span class="com" style="color:#D81B60;">// This is a poorly nested data architecture, because iterating the children</span><span class="pln"> &nbsp; </span><span class="com" style="color:#D81B60;">// of the "chats" node to get a list of conversation titles requires</span><span class="pln"> &nbsp; </span><span class="com" style="color:#D81B60;">// potentially downloading hundreds of megabytes of messages</span><span class="pln"> &nbsp; </span><span class="str" style="color:#0D904F;">"chats"</span><span class="pun">: {
+&nbsp; &nbsp; </span><span class="str" style="color:#0D904F;">"one"</span><span class="pun">: {
+&nbsp; &nbsp; &nbsp; </span><span class="str" style="color:#0D904F;">"title"</span><span class="pun">: </span><span class="str" style="color:#0D904F;">"Historical Tech Pioneers"</span><span class="pun">,
+&nbsp; &nbsp; &nbsp; </span><span class="str" style="color:#0D904F;">"messages"</span><span class="pun">: {
+&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str" style="color:#0D904F;">"m1"</span><span class="pun">: { </span><span class="str" style="color:#0D904F;">"sender"</span><span class="pun">: </span><span class="str" style="color:#0D904F;">"ghopper"</span><span class="pun">, </span><span class="str" style="color:#0D904F;">"message"</span><span class="pun">: </span><span class="str" style="color:#0D904F;">"Relay malfunction found. Cause: moth."</span><span class="pln"> },
+&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str" style="color:#0D904F;">"m2"</span><span class="pun">: { ... },
+&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com" style="color:#D81B60;">// a very long list of messages</span><span class="pln"> &nbsp; &nbsp; &nbsp; }
+&nbsp; &nbsp; },
+&nbsp; &nbsp; </span><span class="str" style="color:#0D904F;">"two"</span><span class="pun">: { ... }
+&nbsp; }
+}</span></pre>
+<p>
+    <span style="font-size:15px;color:#4F81BD;">若采用这种嵌套设计，循环访问数据就会出现问题。例如，要列出聊天对话标题，就需要将整个&nbsp;</span><span style="font-size:15px;color:#4F81BD;">chats</span><span style="font-size:15px;color:#4F81BD;">&nbsp;树（包括所有成员和消息）都下载到客户端。</span>
+</p>
+<p>
+    <br />
+</p>
+<ul class=" list-paddingleft-2">
+    <li>
+        <p style="color:#3E3E3E;">
+            <span style="color:#212121;">平展数据结构</span>
+        </p>
+    </li>
+</ul>
+<p style="color:#3E3E3E;">
+    &nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#212121;">如果数据被拆分到不同路径（又称反规范化），则可根据需要通过不同调用有效地下载。 请考虑此平面化结构：</span>
+</p>
+<pre class="prettyprint"><span class="pun">{
+&nbsp; </span><span class="com" style="color:#D81B60;">// Chats contains only meta info about each conversation</span><span class="pln"> &nbsp; </span><span class="com" style="color:#D81B60;">// stored under the chats's unique ID</span><span class="pln"> &nbsp; </span><span class="str" style="color:#0D904F;">"chats"</span><span class="pun">: {
+&nbsp; &nbsp; </span><span class="str" style="color:#0D904F;">"one"</span><span class="pun">: {
+&nbsp; &nbsp; &nbsp; </span><span class="str" style="color:#0D904F;">"title"</span><span class="pun">: </span><span class="str" style="color:#0D904F;">"Historical Tech Pioneers"</span><span class="pun">,
+&nbsp; &nbsp; &nbsp; </span><span class="str" style="color:#0D904F;">"lastMessage"</span><span class="pun">: </span><span class="str" style="color:#0D904F;">"ghopper: Relay malfunction found. Cause: moth."</span><span class="pun">,
+&nbsp; &nbsp; &nbsp; </span><span class="str" style="color:#0D904F;">"timestamp"</span><span class="pun">: </span><span class="lit" style="color:#C53929;">1459361875666</span><span class="pln"> &nbsp; &nbsp; },
+&nbsp; &nbsp; </span><span class="str" style="color:#0D904F;">"two"</span><span class="pun">: { ... },
+&nbsp; &nbsp; </span><span class="str" style="color:#0D904F;">"three"</span><span class="pun">: { ... }
+&nbsp; },
+
+&nbsp; </span><span class="com" style="color:#D81B60;">// Conversation members are easily accessible</span><span class="pln"> &nbsp; </span><span class="com" style="color:#D81B60;">// and stored by chat conversation ID</span><span class="pln"> &nbsp; </span><span class="str" style="color:#0D904F;">"members"</span><span class="pun">: {
+&nbsp; &nbsp; </span><span class="com" style="color:#D81B60;">// we'll talk about indices like this below</span><span class="pln"> &nbsp; &nbsp; </span><span class="str" style="color:#0D904F;">"one"</span><span class="pun">: {
+&nbsp; &nbsp; &nbsp; </span><span class="str" style="color:#0D904F;">"ghopper"</span><span class="pun">: </span><span class="kwd" style="color:#3B78E7;">true</span><span class="pun">,
+&nbsp; &nbsp; &nbsp; </span><span class="str" style="color:#0D904F;">"alovelace"</span><span class="pun">: </span><span class="kwd" style="color:#3B78E7;">true</span><span class="pun">,
+&nbsp; &nbsp; &nbsp; </span><span class="str" style="color:#0D904F;">"eclarke"</span><span class="pun">: </span><span class="kwd" style="color:#3B78E7;">true</span><span class="pln"> &nbsp; &nbsp; },
+&nbsp; &nbsp; </span><span class="str" style="color:#0D904F;">"two"</span><span class="pun">: { ... },
+&nbsp; &nbsp; </span><span class="str" style="color:#0D904F;">"three"</span><span class="pun">: { ... }
+&nbsp; },
+
+&nbsp; </span><span class="com" style="color:#D81B60;">// Messages are separate from data we may want to iterate quickly</span><span class="pln"> &nbsp; </span><span class="com" style="color:#D81B60;">// but still easily paginated and queried, and organized by chat</span><span class="pln"> &nbsp; </span><span class="com" style="color:#D81B60;">// converation ID</span><span class="pln"> &nbsp; </span><span class="str" style="color:#0D904F;">"messages"</span><span class="pun">: {
+&nbsp; &nbsp; </span><span class="str" style="color:#0D904F;">"one"</span><span class="pun">: {
+&nbsp; &nbsp; &nbsp; </span><span class="str" style="color:#0D904F;">"m1"</span><span class="pun">: {
+&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str" style="color:#0D904F;">"name"</span><span class="pun">: </span><span class="str" style="color:#0D904F;">"eclarke"</span><span class="pun">,
+&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str" style="color:#0D904F;">"message"</span><span class="pun">: </span><span class="str" style="color:#0D904F;">"The relay seems to be malfunctioning."</span><span class="pun">,
+&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str" style="color:#0D904F;">"timestamp"</span><span class="pun">: </span><span class="lit" style="color:#C53929;">1459361875337</span><span class="pln"> &nbsp; &nbsp; &nbsp; },
+&nbsp; &nbsp; &nbsp; </span><span class="str" style="color:#0D904F;">"m2"</span><span class="pun">: { ... },
+&nbsp; &nbsp; &nbsp; </span><span class="str" style="color:#0D904F;">"m3"</span><span class="pun">: { ... }
+&nbsp; &nbsp; },
+&nbsp; &nbsp; </span><span class="str" style="color:#0D904F;">"two"</span><span class="pun">: { ... },
+&nbsp; &nbsp; </span><span class="str" style="color:#0D904F;">"three"</span><span class="pun">: { ... }
+&nbsp; }
+}</span></pre>
+<p>
+    <span style="color:#212121;">现在，每个对话只需下载几个字节即可循环访问房间列表，同时可以快速提取元数据，在 UI 中列出或显示房间。</span><span class="pun"></span>
+</p>
+<p style="color:#212121;">
+    在消息到达时，可单独提取和显示，从而确保 UI 的及时响应和速度。
+</p>
+<ul class=" list-paddingleft-2">
+    <li>
+        <p style="color:#3E3E3E;">
+            <span style="color:#212121;">创建可扩展的数据</span>
+        </p>
+    </li>
+</ul>
+<p style="color:#3E3E3E;">
+    <span style="font-size:15px;color:#212121;">假设用户与群组之间存在双向关系。 用户可属于一个群组，且群组包含一个用户列表。 当需要决定用户属于哪些群组时，情况就会比较复杂。</span><span style="color:#212121;"></span>
+</p>
+<p style="color:#212121;">
+    <span style="font-size:15px;">我们需要的是一种完善方法，不仅列出用户所属群组，而且只提取这些群组的数据。 对群组的"索引"在此可能有很大的帮助：</span>
+</p>
+<pre class="prettyprint"><span class="com" style="color:#D81B60;">// An index to track Ada's memberships</span><span class="pln"> {
+&nbsp; </span><span class="str" style="color:#0D904F;">"users"</span><span class="pun">: {
+&nbsp; &nbsp; </span><span class="str" style="color:#0D904F;">"alovelace"</span><span class="pun">: {
+&nbsp; &nbsp; &nbsp; </span><span class="str" style="color:#0D904F;">"name"</span><span class="pun">: </span><span class="str" style="color:#0D904F;">"Ada Lovelace"</span><span class="pun">,
+&nbsp; &nbsp; &nbsp; </span><span class="com" style="color:#D81B60;">// Index Ada's groups in her profile</span><span class="pln"> &nbsp; &nbsp; &nbsp; </span><span class="str" style="color:#0D904F;">"groups"</span><span class="pun">: {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="com" style="color:#D81B60;">// the value here doesn't matter, just that the key exists</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="str" style="color:#0D904F;">"techpioneers"</span><span class="pun">: </span><span class="kwd" style="color:#3B78E7;">true</span><span class="pun">,
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="str" style="color:#0D904F;">"womentechmakers"</span><span class="pun">: </span><span class="kwd" style="color:#3B78E7;">true</span><span class="pln"> &nbsp; &nbsp; &nbsp; }
+&nbsp; &nbsp; },
+&nbsp; &nbsp; ...
+&nbsp; },
+&nbsp; </span><span class="str" style="color:#0D904F;">"groups"</span><span class="pun">: {
+&nbsp; &nbsp; </span><span class="str" style="color:#0D904F;">"techpioneers"</span><span class="pun">: {
+&nbsp; &nbsp; &nbsp; </span><span class="str" style="color:#0D904F;">"name"</span><span class="pun">: </span><span class="str" style="color:#0D904F;">"Historical Tech Pioneers"</span><span class="pun">,
+&nbsp; &nbsp; &nbsp; </span><span class="str" style="color:#0D904F;">"members"</span><span class="pun">: {
+&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str" style="color:#0D904F;">"alovelace"</span><span class="pun">: </span><span class="kwd" style="color:#3B78E7;">true</span><span class="pun">,
+&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str" style="color:#0D904F;">"ghopper"</span><span class="pun">: </span><span class="kwd" style="color:#3B78E7;">true</span><span class="pun">,
+&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="str" style="color:#0D904F;">"eclarke"</span><span class="pun">: </span><span class="kwd" style="color:#3B78E7;">true</span><span class="pln"> &nbsp; &nbsp; &nbsp; }
+&nbsp; &nbsp; },
+&nbsp; &nbsp; ...
+&nbsp; }
+}</span></pre>
+<p style="color:#212121;">
+    <span style="font-size:15px;">这种索引是通过存储 Ada 记录及该群组下的关系来重复某些数据的。 现在，</span><span style="font-size:15px;">alovelace</span><span style="font-size:15px;">&nbsp;在一个群组下进行索引，而&nbsp;</span><span style="font-size:15px;">techpioneers</span><span style="font-size:15px;">&nbsp;则列在 Ada 的个人资料中。 所以要从该群组删除 Ada，则必须在两个地方更新。</span>
+</p>
+<p style="color:#212121;">
+    <span style="font-size:15px;">对于双向关系而言，这是必要的冗余。这样，您就可以快速、高效地提取 Ada 的成员身份，而且即使用户或群组列表有数百万条记录，或 Realtime Database 安全规则会阻止访问某些记录，也不受影响。</span>
+</p>
+<p style="color:#212121;">
+    <span style="font-size:15px;">这种方法通过将 ID 列为密钥并将值设为 true 来颠倒数据，使密钥检查变得像读取&nbsp;</span><span style="font-size:15px;">/users/$uid/groups/$group_id</span><span style="font-size:15px;">&nbsp;和检查是否&nbsp;</span><span style="font-size:15px;">null</span><span style="font-size:15px;">&nbsp;一样简单。与查询或扫描数据相比，索引的速度更快，效率更高。</span>
+</p>
+<img src="https://mmbiz.qlogo.cn/mmbiz_png/fgnkxfGnnkTMNtGy7KWfCrdJibAYY6HtIeOpQc0iaRNeAWWoBHNsMZEFmY9TtQEfWKdwdTWLuslYLTaH9qxs4NXQ/0?" class="" style="height:auto !important;width:50px;" /><span style="color:#7F7F7F;font-size:15px;">&nbsp;&nbsp;&nbsp;&nbsp;在Android上保存数据</span>
+<p style="color:#3E3E3E;">
+    <span style="font-size:15px;color:#212121;">有四种方法可以将数据写入 Firebase Realtime Database：</span>
+</p>
+<p style="color:#3E3E3E;">
+    <span style="color:#C00000;background-color:#C6D9F0;"><strong>setValue()：</strong></span>
+</p>
+<p style="color:#3E3E3E;">
+    <span style="font-size:15px;color:#4F81BD;">常见用法：</span><span style="font-size:15px;color:#000000;">将数据写入或替换到定义的路径，如&nbsp;<span style="color:#000000;font-size:15px;">users/&lt;user-id&gt;/&lt;username&gt;</span>。</span>
+</p>
+<p style="color:#3E3E3E;">
+    <br />
+</p>
+<p style="color:#3E3E3E;">
+    <span style="color:#C00000;background-color:#C6D9F0;"><strong>push()：</strong></span>
+</p>
+<p style="color:#3E3E3E;">
+    <span style="font-size:15px;color:#4F81BD;">常见用法：&nbsp;</span><span style="font-size:15px;color:#212121;background-color:rgba(255, 255, 255, 0.95);">添加到数据列表。每次调用&nbsp;</span><span style="font-size:15px;">push()</span><span style="color:#212121;background-color:rgba(255, 255, 255, 0.95);font-size:15px;">&nbsp;时，Firebase 均会生成唯一 ID，如&nbsp;</span><span style="font-size:15px;">user-posts/&lt;user-id&gt;/&lt;unique-post-id&gt;</span><span style="color:#212121;background-color:rgba(255, 255, 255, 0.95);font-size:15px;">。</span>
+</p>
+<p style="color:#3E3E3E;">
+    <br />
+</p>
+<p style="color:#3E3E3E;">
+    <span style="color:#C00000;background-color:#C6D9F0;"><strong>updateChildren()：</strong></span>
+</p>
+<p style="color:#3E3E3E;">
+    <span style="font-size:15px;color:#4F81BD;">常见用法：</span><span style="font-size:15px;">更新定义的路径中的部分键，而不替换所有数据。</span>
+</p>
+<p style="color:#3E3E3E;">
+    <br />
+</p>
+<p style="color:#3E3E3E;">
+    <span style="color:#C00000;background-color:#C6D9F0;"><strong>runTransaction()：</strong></span>
+</p>
+<p style="color:#3E3E3E;">
+    <span style="font-size:15px;color:#4F81BD;">常见用法：</span><span style="font-size:15px;">更新可能因并发更新而损坏的复杂数据。</span>
+</p>
+<p style="color:#3E3E3E;">
+    <br />
+</p>
+<p style="color:#3E3E3E;">
+    <span style="font-size:19px;color:#212121;">写入、更新或删除引用中的数据</span>
+</p>
+<h3 style="font-size:20px;color:#212121;">
+    <span style="font-size:18px;">基本写入操作</span>
+</h3>
+<p>
+    <span style="color:#212121;">对于基本写入操作，您可以使用&nbsp;</span>setValue()<span style="color:#212121;">&nbsp;将数据保存至特定引用，替换该路径的任何现有数据。 可以使用该方法执行下列操作：</span>
+</p>
+<ul class=" list-paddingleft-2" style="color:#212121;">
+    <li>
+        <p>
+            传递与可用 JSON 类型对应的类型，如下所示：
+        </p>
+    </li>
+    <ul class=" list-paddingleft-2">
+        <li>
+            <p>
+                String
+            </p>
+        </li>
+        <li>
+            <p>
+                Long
+            </p>
+        </li>
+        <li>
+            <p>
+                Double
+            </p>
+        </li>
+        <li>
+            <p>
+                Boolean
+            </p>
+        </li>
+        <li>
+            <p>
+                Map&lt;String, Object&gt;
+            </p>
+        </li>
+        <li>
+            <p>
+                List&lt;Object&gt;
+            </p>
+        </li>
+    </ul>
+</ul>
+<ul class=" list-paddingleft-2" style="color:#212121;">
+    <li>
+        <p>
+            传递自定义 Java 对象（如果定义该对象的类的默认构造函数不接受参数，且为要指定的属性提供了公用 getter）。 如果使用 Java 对象，则对象的内容将自动以嵌套方式映射到子位置。使用 Java 对象通常还会提高代码的可读性，使其更易于维护。例如，如果应用包含用户的基本个人资料，则&nbsp;User&nbsp;对象可能如下所示：
+        </p>
+    </li>
+</ul>
+<pre class="prettyprint"><span class="lit" style="color:#C53929;">@IgnoreExtraProperties</span><span class="pln"> </span><span class="kwd" style="color:#3B78E7;">public</span><span class="pln"> </span><span class="kwd" style="color:#3B78E7;">class</span><span class="pln"> </span><span class="typ" style="color:#9C27B0;">User</span><span class="pln"> {
+
+&nbsp; &nbsp; </span><span class="kwd" style="color:#3B78E7;">public</span><span class="pln"> </span><span class="typ" style="color:#9C27B0;">String</span><span class="pln"> username;
+&nbsp; &nbsp; </span><span class="kwd" style="color:#3B78E7;">public</span><span class="pln"> </span><span class="typ" style="color:#9C27B0;">String</span><span class="pln"> email;
+
+&nbsp; &nbsp; </span><span class="kwd" style="color:#3B78E7;">public</span><span class="pln"> </span><span class="typ" style="color:#9C27B0;">User</span><span class="pun">() {
+&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com" style="color:#D81B60;">// Default constructor required for calls to DataSnapshot.getValue(User.class)</span><span class="pln"> &nbsp; &nbsp; }
+
+&nbsp; &nbsp; </span><span class="kwd" style="color:#3B78E7;">public</span><span class="pln"> </span><span class="typ" style="color:#9C27B0;">User</span><span class="pun">(</span><span class="typ" style="color:#9C27B0;">String</span><span class="pln"> username, </span><span class="typ" style="color:#9C27B0;">String</span><span class="pln"> email) {
+&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd" style="color:#3B78E7;">this</span><span class="pun">.username = username;
+&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd" style="color:#3B78E7;">this</span><span class="pun">.email = email;
+&nbsp; &nbsp; }
+
+}</span></pre>
+<p style="color:#212121;">
+    可以使用&nbsp;setValue()&nbsp;添加用户，如下所示：
+</p>
+<pre class="prettyprint"><span class="kwd" style="color:#3B78E7;">private</span><span class="pln"> </span><span class="kwd" style="color:#3B78E7;">void</span><span class="pln"> writeNewUser(</span><span class="typ" style="color:#9C27B0;">String</span><span class="pln"> userId, </span><span class="typ" style="color:#9C27B0;">String</span><span class="pln"> name, </span><span class="typ" style="color:#9C27B0;">String</span><span class="pln"> email) {
+&nbsp; &nbsp; </span><span class="typ" style="color:#9C27B0;">User</span><span class="pln"> user = </span><span class="kwd" style="color:#3B78E7;">new</span><span class="pln"> </span><span class="typ" style="color:#9C27B0;">User</span><span class="pun">(name, email);
+
+&nbsp; &nbsp; mDatabase.child(</span><span class="str" style="color:#0D904F;">"users"</span><span class="pun">).child(userId).setValue(user);
+}</span></pre>
+<p style="color:#212121;">
+    以这种方式使用&nbsp;setValue()&nbsp;将覆盖指定位置的数据，包括所有子节点。但是，您仍可在不重写整个对象的情况下更新子节点。 如果要允许用户更新其个人资料，则可按照如下所示更新用户名：
+</p>
+<pre class="prettyprint notranslate"><span class="pln">mDatabase.child(</span><span class="str" style="color:#0D904F;">"users"</span><span class="pun">).child(userId).child(</span><span class="str" style="color:#0D904F;">"username"</span><span class="pun">).setValue(name);</span></pre>
+<h3 style="font-size:20px;color:#212121;">
+    <span style="font-size:18px;">追加到数据列表</span>
+</h3>
+<p>
+    <span style="color:#212121;">使用&nbsp;</span><span style="font-size:16px;">push()</span><span style="color:#212121;">&nbsp;方法可将数据追加到多用户应用中的列表。每次将新子节点添加到指定的 Firebase 引用时，</span><span style="font-size:16px;">push()</span><span style="color:#212121;">&nbsp;方法均会生成唯一 ID。</span>
+</p>
+<p style="color:#212121;">
+    通过为列表中的各新元素使用自动生成的键，多个客户端可以同时向同一位置添加子节点，而不存在写入冲突。
+</p>
+<p style="color:#212121;">
+    <span style="font-size:16px;">push()</span>&nbsp;生成的唯一 ID 基于时间戳，因此列表项目会自动按时间顺序排列。
+</p>
+<p style="color:#212121;">
+    您可以使用对新数据（由&nbsp;<span style="font-size:16px;">push()</span>&nbsp;方法返回）的引用获取子节点自动生成的键的值或为子节点设置数据。 对&nbsp;<span style="font-size:16px;">push()</span>&nbsp;引用调用&nbsp;<span style="font-size:16px;">getKey()</span>&nbsp;将返回自动生成的键值。
+</p>
+<h3 style="font-size:20px;color:#212121;">
+    <span style="font-size:18px;">更新特定字段</span>
+</h3>
+<p style="color:#212121;">
+    要同时向一个节点的特定子节点写入数据，而不覆盖其他子节点，请使用&nbsp;updateChildren()&nbsp;方法。
+</p>
+<p style="color:#212121;">
+    调用&nbsp;updateChildren()&nbsp;时，可以通过为键指定路径来更新较低级别的子值。
+</p>
+<p style="color:#212121;">
+    例如，社交博客应用可能具有&nbsp;Post&nbsp;类，如下所示：
+</p>
+<pre class="prettyprint"><span class="lit" style="color:#C53929;">@IgnoreExtraProperties</span><span class="pln"> </span><span class="kwd" style="color:#3B78E7;">public</span><span class="pln"> </span><span class="kwd" style="color:#3B78E7;">class</span><span class="pln"> </span><span class="typ" style="color:#9C27B0;">Post</span><span class="pln"> {
+
+&nbsp; &nbsp; </span><span class="kwd" style="color:#3B78E7;">public</span><span class="pln"> </span><span class="typ" style="color:#9C27B0;">String</span><span class="pln"> uid;
+&nbsp; &nbsp; </span><span class="kwd" style="color:#3B78E7;">public</span><span class="pln"> </span><span class="typ" style="color:#9C27B0;">String</span><span class="pln"> author;
+&nbsp; &nbsp; </span><span class="kwd" style="color:#3B78E7;">public</span><span class="pln"> </span><span class="typ" style="color:#9C27B0;">String</span><span class="pln"> title;
+&nbsp; &nbsp; </span><span class="kwd" style="color:#3B78E7;">public</span><span class="pln"> </span><span class="typ" style="color:#9C27B0;">String</span><span class="pln"> body;
+&nbsp; &nbsp; </span><span class="kwd" style="color:#3B78E7;">public</span><span class="pln"> </span><span class="kwd" style="color:#3B78E7;">int</span><span class="pln"> starCount = </span><span class="lit" style="color:#C53929;">0</span><span class="pun">;
+&nbsp; &nbsp; </span><span class="kwd" style="color:#3B78E7;">public</span><span class="pln"> </span><span class="typ" style="color:#9C27B0;">Map</span><span class="pun">&lt;</span><span class="typ" style="color:#9C27B0;">String</span><span class="pun">, </span><span class="typ" style="color:#9C27B0;">Boolean</span><span class="pun">&gt; stars = </span><span class="kwd" style="color:#3B78E7;">new</span><span class="pln"> </span><span class="typ" style="color:#9C27B0;">HashMap</span><span class="pun">&lt;&gt;();
+
+&nbsp; &nbsp; </span><span class="kwd" style="color:#3B78E7;">public</span><span class="pln"> </span><span class="typ" style="color:#9C27B0;">Post</span><span class="pun">() {
+&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com" style="color:#D81B60;">// Default constructor required for calls to DataSnapshot.getValue(Post.class)</span><span class="pln"> &nbsp; &nbsp; }
+
+&nbsp; &nbsp; </span><span class="kwd" style="color:#3B78E7;">public</span><span class="pln"> </span><span class="typ" style="color:#9C27B0;">Post</span><span class="pun">(</span><span class="typ" style="color:#9C27B0;">String</span><span class="pln"> uid, </span><span class="typ" style="color:#9C27B0;">String</span><span class="pln"> author, </span><span class="typ" style="color:#9C27B0;">String</span><span class="pln"> title, </span><span class="typ" style="color:#9C27B0;">String</span><span class="pln"> body) {
+&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd" style="color:#3B78E7;">this</span><span class="pun">.uid = uid;
+&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd" style="color:#3B78E7;">this</span><span class="pun">.author = author;
+&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd" style="color:#3B78E7;">this</span><span class="pun">.title = title;
+&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd" style="color:#3B78E7;">this</span><span class="pun">.body = body;
+&nbsp; &nbsp; }
+
+&nbsp; &nbsp; </span><span class="lit" style="color:#C53929;">@Exclude</span><span class="pln"> &nbsp; &nbsp; </span><span class="kwd" style="color:#3B78E7;">public</span><span class="pln"> </span><span class="typ" style="color:#9C27B0;">Map</span><span class="pun">&lt;</span><span class="typ" style="color:#9C27B0;">String</span><span class="pun">, </span><span class="typ" style="color:#9C27B0;">Object</span><span class="pun">&gt; toMap() {
+&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="typ" style="color:#9C27B0;">HashMap</span><span class="pun">&lt;</span><span class="typ" style="color:#9C27B0;">String</span><span class="pun">, </span><span class="typ" style="color:#9C27B0;">Object</span><span class="pun">&gt; result = </span><span class="kwd" style="color:#3B78E7;">new</span><span class="pln"> </span><span class="typ" style="color:#9C27B0;">HashMap</span><span class="pun">&lt;&gt;();
+&nbsp; &nbsp; &nbsp; &nbsp; result.put(</span><span class="str" style="color:#0D904F;">"uid"</span><span class="pun">, uid);
+&nbsp; &nbsp; &nbsp; &nbsp; result.put(</span><span class="str" style="color:#0D904F;">"author"</span><span class="pun">, author);
+&nbsp; &nbsp; &nbsp; &nbsp; result.put(</span><span class="str" style="color:#0D904F;">"title"</span><span class="pun">, title);
+&nbsp; &nbsp; &nbsp; &nbsp; result.put(</span><span class="str" style="color:#0D904F;">"body"</span><span class="pun">, body);
+&nbsp; &nbsp; &nbsp; &nbsp; result.put(</span><span class="str" style="color:#0D904F;">"starCount"</span><span class="pun">, starCount);
+&nbsp; &nbsp; &nbsp; &nbsp; result.put(</span><span class="str" style="color:#0D904F;">"stars"</span><span class="pun">, stars);
+
+&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd" style="color:#3B78E7;">return</span><span class="pln"> result;
+&nbsp; &nbsp; }
+
+}</span></pre>
+<p style="color:#212121;">
+    要创建一篇博文并同时更新为最新的活动源和发布用户的活动源，该博客应用需使用如下代码：
+</p>
+<pre class="prettyprint"><span class="kwd" style="color:#3B78E7;">private</span><span class="pln"> </span><span class="kwd" style="color:#3B78E7;">void</span><span class="pln"> writeNewPost(</span><span class="typ" style="color:#9C27B0;">String</span><span class="pln"> userId, </span><span class="typ" style="color:#9C27B0;">String</span><span class="pln"> username, </span><span class="typ" style="color:#9C27B0;">String</span><span class="pln"> title, </span><span class="typ" style="color:#9C27B0;">String</span><span class="pln"> body) {
+&nbsp; &nbsp; </span><span class="com" style="color:#D81B60;">// Create new post at /user-posts/$userid/$postid and at</span><span class="pln"> &nbsp; &nbsp; </span><span class="com" style="color:#D81B60;">// /posts/$postid simultaneously</span><span class="pln"> &nbsp; &nbsp; </span><span class="typ" style="color:#9C27B0;">String</span><span class="pln"> key = mDatabase.child(</span><span class="str" style="color:#0D904F;">"posts"</span><span class="pun">).push().getKey();
+&nbsp; &nbsp; </span><span class="typ" style="color:#9C27B0;">Post</span><span class="pln"> post = </span><span class="kwd" style="color:#3B78E7;">new</span><span class="pln"> </span><span class="typ" style="color:#9C27B0;">Post</span><span class="pun">(userId, username, title, body);
+&nbsp; &nbsp; </span><span class="typ" style="color:#9C27B0;">Map</span><span class="pun">&lt;</span><span class="typ" style="color:#9C27B0;">String</span><span class="pun">, </span><span class="typ" style="color:#9C27B0;">Object</span><span class="pun">&gt; postValues = post.toMap();
+
+&nbsp; &nbsp; </span><span class="typ" style="color:#9C27B0;">Map</span><span class="pun">&lt;</span><span class="typ" style="color:#9C27B0;">String</span><span class="pun">, </span><span class="typ" style="color:#9C27B0;">Object</span><span class="pun">&gt; childUpdates = </span><span class="kwd" style="color:#3B78E7;">new</span><span class="pln"> </span><span class="typ" style="color:#9C27B0;">HashMap</span><span class="pun">&lt;&gt;();
+&nbsp; &nbsp; childUpdates.put(</span><span class="str" style="color:#0D904F;">"/posts/"</span><span class="pln"> + key, postValues);
+&nbsp; &nbsp; childUpdates.put(</span><span class="str" style="color:#0D904F;">"/user-posts/"</span><span class="pln"> + userId + </span><span class="str" style="color:#0D904F;">"/"</span><span class="pln"> + key, postValues);
+
+&nbsp; &nbsp; mDatabase.updateChildren(childUpdates);
+}</span></pre>
+<p style="color:#212121;">
+    此示例使用&nbsp;push()&nbsp;在节点（其中包含&nbsp;/posts/$postid&nbsp;内所有用户博文）中创建一篇博文，同时使用&nbsp;getKey()&nbsp;检索相应键。
+</p>
+<p style="color:#212121;">
+    然后，可以使用该键在用户博文（位于&nbsp;/user-posts/$userid/$postid&nbsp;内）中创建第二个条目。
+</p>
+<p style="color:#212121;">
+    通过使用这些路径，只需调用&nbsp;updateChildren()&nbsp;一次即可同步更新 JSON 树中的多个位置，例如，该示例如何在两个位置同时创建新博文。
+</p>
+<p style="color:#212121;">
+    通过这种方式同步更新具有原子性：要么所有更新全部成功，要么全部失败。
+</p>
+<h3 style="font-size:20px;color:#212121;">
+    <span style="font-size:18px;">删除数据</span>
+</h3>
+<p style="color:#212121;">
+    删除数据最简单的方法是在引用上对这些数据所处的位置调用&nbsp;removeValue()。
+</p>
+<p style="color:#212121;">
+    此外，还可以通过将&nbsp;null&nbsp;指定为另一个写入操作（例如，setValue()&nbsp;或&nbsp;updateChildren()）的值来删除数据。 您可以结合使用此方法与&nbsp;updateChildren()，在单一 API 调用中删除多个子节点。
+</p>
+<h3 style="font-size:20px;color:#212121;">
+    <span style="font-size:18px;">接收完成回调</span>
+</h3>
+<p style="color:#212121;">
+    要知道将数据提交到 Firebase Realtime Database 服务器的时间，可以添加完成侦听器。&nbsp;setValue()&nbsp;和&nbsp;updateChildren()&nbsp;均接受可选的完成侦听器。写入的数据提交到数据库时，系统将调用该侦听器。
+</p>
+<p style="color:#212121;">
+    如果调用因故失败，系统将为该侦听器传递一个错误对象，说明失败的原因。
+</p>
+<h2 style="font-size:24px;color:#212121;">
+    <span style="font-size:19px;">将数据另存为事务</span>
+</h2>
+<p style="color:#212121;">
+    处理可能因并发修改而损坏的复杂数据（例如，增量计数器）时，可以使用事务处理操作。您为此操作提供两个参数，即：更新函数和可选完成回调。
+</p>
+<p style="color:#212121;">
+    更新函数将数据的当前状态视为参数，并将返回您要写入的所需新状态。 如果另一个客户端在您成功写入新值前写入该位置，则会使用新的当前值再次调用更新函数，然后重试写入。
+</p>
+<p style="color:#212121;">
+    例如，在示例社交博客应用中，您可以允许用户对博文加星和取消加星，并跟踪博文获得的加星数，如下所示：
+</p>
+<pre class="prettyprint"><span class="kwd" style="color:#3B78E7;">private</span><span class="pln"> </span><span class="kwd" style="color:#3B78E7;">void</span><span class="pln"> onStarClicked(</span><span class="typ" style="color:#9C27B0;">DatabaseReference</span><span class="pln"> postRef) {
+&nbsp; &nbsp; postRef.runTransaction(</span><span class="kwd" style="color:#3B78E7;">new</span><span class="pln"> </span><span class="typ" style="color:#9C27B0;">Transaction</span><span class="pun">.</span><span class="typ" style="color:#9C27B0;">Handler</span><span class="pun">() {
+&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="lit" style="color:#C53929;">@Override</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd" style="color:#3B78E7;">public</span><span class="pln"> </span><span class="typ" style="color:#9C27B0;">Transaction</span><span class="pun">.</span><span class="typ" style="color:#9C27B0;">Result</span><span class="pln"> doTransaction(</span><span class="typ" style="color:#9C27B0;">MutableData</span><span class="pln"> mutableData) {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="typ" style="color:#9C27B0;">Post</span><span class="pln"> p = mutableData.getValue(</span><span class="typ" style="color:#9C27B0;">Post</span><span class="pun">.</span><span class="kwd" style="color:#3B78E7;">class</span><span class="pun">);
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd" style="color:#3B78E7;">if</span><span class="pln"> (p == </span><span class="kwd" style="color:#3B78E7;">null</span><span class="pun">) {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd" style="color:#3B78E7;">return</span><span class="pln"> </span><span class="typ" style="color:#9C27B0;">Transaction</span><span class="pun">.success(mutableData);
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd" style="color:#3B78E7;">if</span><span class="pln"> (p.stars.containsKey(getUid())) {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com" style="color:#D81B60;">// Unstar the post and remove self from stars</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; p.starCount = p.starCount - </span><span class="lit" style="color:#C53929;">1</span><span class="pun">;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; p.stars.remove(getUid());
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; } </span><span class="kwd" style="color:#3B78E7;">else</span><span class="pln"> {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com" style="color:#D81B60;">// Star the post and add self to stars</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; p.starCount = p.starCount + </span><span class="lit" style="color:#C53929;">1</span><span class="pun">;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; p.stars.put(getUid(), </span><span class="kwd" style="color:#3B78E7;">true</span><span class="pun">);
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com" style="color:#D81B60;">// Set value and report transaction success</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; mutableData.setValue(p);
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd" style="color:#3B78E7;">return</span><span class="pln"> </span><span class="typ" style="color:#9C27B0;">Transaction</span><span class="pun">.success(mutableData);
+&nbsp; &nbsp; &nbsp; &nbsp; }
+
+&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="lit" style="color:#C53929;">@Override</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd" style="color:#3B78E7;">public</span><span class="pln"> </span><span class="kwd" style="color:#3B78E7;">void</span><span class="pln"> onComplete(</span><span class="typ" style="color:#9C27B0;">DatabaseError</span><span class="pln"> databaseError, </span><span class="kwd" style="color:#3B78E7;">boolean</span><span class="pln"> b,
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="typ" style="color:#9C27B0;">DataSnapshot</span><span class="pln"> dataSnapshot) {
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com" style="color:#D81B60;">// Transaction completed</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="typ" style="color:#9C27B0;">Log</span><span class="pun">.d(TAG, </span><span class="str" style="color:#0D904F;">"postTransaction:onComplete:"</span><span class="pln"> + databaseError);
+&nbsp; &nbsp; &nbsp; &nbsp; }
+&nbsp; &nbsp; });
+}</span></pre>
+<p style="color:#212121;">
+    如果多个用户同时对同一博文加星或客户端存在过时数据，使用事务处理可防止加星计数出错。 如果事务处理被拒绝，则服务器会将当前值返回到客户端，然后客户端使用更新后的值再次运行事务处理。
+</p>
+<p style="color:#212121;">
+    系统将重复此过程，直到事务处理被接受或尝试次数过多为止。
+</p>
+<p style="color:#212121;">
+    注：由于&nbsp;doTransaction()&nbsp;将多次调用，因此必须能够处理&nbsp;null&nbsp;数据。 即使远程数据库中已有数据，但在运行事务处理函数时可能不会本地缓存这些数据，从而导致&nbsp;null&nbsp;成为初始值。
+</p>
+<h2 style="font-size:24px;color:#212121;">
+    <span style="font-size:19px;">离线写入数据</span>
+</h2>
+<p style="color:#212121;">
+    如果客户端失去网络连接，您的应用将继续正常运行。
+</p>
+<p style="color:#212121;">
+    连接到 Firebase 数据库的每个客户端均维护任何活动数据各自的内部版本。 写入数据时，首先将其写入此本地版本。 然后，Firebase 客户端尽最大程度将这些数据与远程数据库服务器以及其他客户端同步。
+</p>
+<p style="color:#212121;">
+    因此，在将任何数据写入服务器之前，对数据库执行的所有写入会立即触发本地事件。 这意味着应用将保持随时响应，无论网络延迟或连接情况如何均是如此。
+</p>
+<p style="color:#212121;">
+    重新建立连接之后，您的应用将收到一组适当的事件，以便客户端与当前服务器状态同步，而不必编写任何自定义代码。
+</p>
+<p style="color:#3E3E3E;text-align:center;">
+    <br />
+</p>
+<p style="color:#3E3E3E;">
+    <br />
+</p>
+<img src="https://mmbiz.qlogo.cn/mmbiz_png/fgnkxfGnnkTMNtGy7KWfCrdJibAYY6HtIeOpQc0iaRNeAWWoBHNsMZEFmY9TtQEfWKdwdTWLuslYLTaH9qxs4NXQ/0?" class="" style="height:auto !important;width:50px;" /><span style="font-size:15px;color:#7F7F7F;">在Android上检索数据</span>
+<p style="color:#3E3E3E;">
+    接下来<span style="color:#212121;">将介绍检索数据的基础知识以及如何对 Firebase 数据进行排序和过滤。</span>
+</p>
+<p style="color:#3E3E3E;">
+    <br />
+</p>
+<h2 style="font-size:24px;color:#212121;">
+    <span style="font-size:19px;">附加事件侦听器</span>
+</h2>
+<p style="color:#3E3E3E;">
+    <span style="color:#212121;">Firebase 数据可通过将异步侦听器附加到&nbsp;</span>FirebaseDatabase<span style="color:#212121;">&nbsp;引用来检索。 侦听器由数据的初始状态触发一次，并在数据发生任何更改时再次触发。</span><span style="line-height:1.6;font-size:15px;"></span>
+</p>
+<p style="color:#3E3E3E;">
+    <br />
+</p>
+<p style="color:#3E3E3E;">
+    <strong><span style="color:#C00000;">可以侦听以下类型的数据检索事件：</span></strong>
+</p>
+<p>
+    <span style="color:#212121;font-size:14px;background-color:rgba(255, 255, 255, 0.95);">ValueEventListener－》onDataChange()</span>
+</p>
+<p>
+    <span style="color:#212121;font-size:14px;background-color:rgba(255, 255, 255, 0.95);">典型用法：</span>
+</p>
+<p>
+    <span style="color:#212121;font-size:14px;background-color:rgba(255, 255, 255, 0.95);">读取和侦听对路径的全部内容所做的更改。</span>
+</p>
+<p>
+    <br />
+</p>
+<p>
+    <span style="color:#212121;font-size:14px;background-color:rgba(255, 255, 255, 0.95);">ChildEventListener－》onChildAdded()</span>
+</p>
+<p>
+    <span style="color:#212121;font-size:14px;background-color:rgba(255, 255, 255, 0.95);">典型用法：</span>
+</p>
+<p>
+    <span style="color:#212121;font-size:14px;background-color:rgba(255, 255, 255, 0.95);">检索项目列表，或侦听项目列表中是否添加了新项目。 建议与&nbsp;<span>onChildChanged()</span>和&nbsp;<span>onChildRemoved()</span>&nbsp;配合使用，从而监控对列表所做的更改。</span>
+</p>
+<p>
+    <span style="color:#212121;font-size:14px;background-color:rgba(255, 255, 255, 0.95);">－》onChildChanged()</span>
+</p>
+<p>
+    <span style="color:#212121;font-size:14px;background-color:rgba(255, 255, 255, 0.95);">典型用法：</span>
+</p>
+<p>
+    <span style="color:#212121;font-size:14px;background-color:rgba(255, 255, 255, 0.95);">侦听对列表中的项目所做的更改。与&nbsp;<span>onChildAdded()</span>&nbsp;和&nbsp;<span>onChildRemoved()</span>&nbsp;结合使用，从而监控对列表所做的更改。</span>
+</p>
+<p>
+    <span style="color:#212121;font-size:14px;background-color:rgba(255, 255, 255, 0.95);">－》onChildRemoved()</span>
+</p>
+<p>
+    <span style="color:#212121;font-size:14px;background-color:rgba(255, 255, 255, 0.95);">典型用法：</span>
+</p>
+<p>
+    <span style="color:#212121;font-size:14px;background-color:rgba(255, 255, 255, 0.95);">侦听正从列表中删除的项目。与&nbsp;<span>onChildAdded()</span>&nbsp;和&nbsp;<span>onChildChanged()</span>&nbsp;结合使用， 从而监控对列表所做的更改。</span>
+</p>
+<p>
+    <span style="color:#212121;font-size:14px;background-color:rgba(255, 255, 255, 0.95);">－》onChildMoved()</span>
+</p>
+<p>
+    <span style="color:#212121;font-size:14px;background-color:rgba(255, 255, 255, 0.95);">典型用法：</span>
+</p>
+<p>
+    <span style="color:#212121;font-size:14px;background-color:rgba(255, 255, 255, 0.95);">与经过排序的数据配合使用，从而侦听对项目优先级所做的更改。</span>
+</p>
+<p>
+    <br />
+</p>
+<p>
+    <span style="font-size:14px;background-color:rgba(255, 255, 255, 0.95);color:#4F81BD;">要添加值事件侦听器，请使用&nbsp;addValueEventListener()&nbsp;或&nbsp;addListenerForSingleValueEvent()&nbsp;方法。 要添加子事件侦听器，请使用&nbsp;addChildEventListener()&nbsp;方法。</span>
+</p>
+<p>
+    <br />
+</p>
+<p>
+    <em><strong><span style="color:#4F81BD;"><span style="background-color:rgba(255, 255, 255, 0.95);color:#000000;">再详细一点：</span></span></strong></em>
+</p>
+<p>
+		<span style="color:#4F81BD;"><span style="color:#000000;font-size:18px;background-color:#C6D9F0;">值事件</span><span style="font-size:14px;background-color:rgba(255, 255, 255, 0.95);"><br />
+</span></span>
+</p>
+<p>
+		<span style="color:#4F81BD;"><span style="font-size:14px;background-color:rgba(255, 255, 255, 0.95);color:#000000;"><span style="color:#212121;">使用&nbsp;</span>onDataChange()<span style="color:#212121;">&nbsp;方法来读取事件发生时某一给定路径下存在的内容的静态快照。此方法将在<span style="color:#C00000;">附加侦听器时</span>触发一次，并在数据（包括子节点）<span style="color:#C00000;">发生任何更改时</span>再次触发。</span><br />
+</span></span>
+</p>
+<p>
+    <br />
+</p>
+<p>
+    <span style="color:#4F81BD;"><span style="font-size:14px;background-color:rgba(255, 255, 255, 0.95);color:#212121;">系统将为事件回调传递一个包含该位置中所有数据（包括子节点数据）的快照。如果没有任何数据，则返回的快照为&nbsp;null。</span></span>
+</p>
+<p>
+    <br />
+</p>
+<p>
+    <strong><span style="color:#4F81BD;"><span style="font-size:14px;background-color:rgba(255, 255, 255, 0.95);color:#FF0000;">重要说明：</span></span></strong>
+</p>
+<p>
+    <strong><span style="color:#4F81BD;"><span style="font-size:14px;background-color:rgba(255, 255, 255, 0.95);color:#FF0000;">重要说明：&nbsp;</span></span></strong>
+</p>
+<p>
+    <strong><span style="color:#4F81BD;"><span style="font-size:14px;background-color:rgba(255, 255, 255, 0.95);color:#FF0000;">重要说明：</span></span></strong><span style="color:#4F81BD;"><span style="font-size:14px;background-color:rgba(255, 255, 255, 0.95);color:#FF0000;">&nbsp;</span></span>
+</p>
+<p>
+    <span style="color:#4F81BD;"><span style="font-size:14px;background-color:rgba(255, 255, 255, 0.95);color:#212121;">每当数据在指定的数据库引用处发生更改（包括更改子节点）时，系统就会调用&nbsp;onDataChange()&nbsp;方法。要限制快照的大小，请仅在需要观察更改的最低级别附加侦听器。例如，建议不要在数据库的根目录附加侦听器。</span></span>
+</p>
+<p>
+    <br />
+</p>
+<p style="color:#212121;">
+    以下示例演示了社交博客应用如何从数据库中检索博文详细信息：
+</p>
+<pre class="prettyprint"><span class="typ" style="color:#9C27B0;">ValueEventListener</span><span class="pln"> postListener </span><span class="pun">=</span><span class="pln"> </span><span class="kwd" style="color:#3B78E7;">new</span><span class="pln"> </span><span class="typ" style="color:#9C27B0;">ValueEventListener</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> &nbsp; &nbsp; </span><span class="lit" style="color:#C53929;">@Override</span><span class="pln"> &nbsp; &nbsp; </span><span class="kwd" style="color:#3B78E7;">public</span><span class="pln"> </span><span class="kwd" style="color:#3B78E7;">void</span><span class="pln"> onDataChange</span><span class="pun">(</span><span class="typ" style="color:#9C27B0;">DataSnapshot</span><span class="pln"> dataSnapshot</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com" style="color:#D81B60;">// Get Post object and use the values to update the UI</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="typ" style="color:#9C27B0;">Post</span><span class="pln"> post </span><span class="pun">=</span><span class="pln"> dataSnapshot</span><span class="pun">.</span><span class="pln">getValue</span><span class="pun">(</span><span class="typ" style="color:#9C27B0;">Post</span><span class="pun">.</span><span class="kwd" style="color:#3B78E7;">class</span><span class="pun">);</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com" style="color:#D81B60;">// ...</span><span class="pln"> &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"> &nbsp; &nbsp; </span><span class="lit" style="color:#C53929;">@Override</span><span class="pln"> &nbsp; &nbsp; </span><span class="kwd" style="color:#3B78E7;">public</span><span class="pln"> </span><span class="kwd" style="color:#3B78E7;">void</span><span class="pln"> onCancelled</span><span class="pun">(</span><span class="typ" style="color:#9C27B0;">DatabaseError</span><span class="pln"> databaseError</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com" style="color:#D81B60;">// Getting Post failed, log a message</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="typ" style="color:#9C27B0;">Log</span><span class="pun">.</span><span class="pln">w</span><span class="pun">(</span><span class="pln">TAG</span><span class="pun">,</span><span class="pln"> </span><span class="str" style="color:#0D904F;">"loadPost:onCancelled"</span><span class="pun">,</span><span class="pln"> databaseError</span><span class="pun">.</span><span class="pln">toException</span><span class="pun">());</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com" style="color:#D81B60;">// ...</span><span class="pln"> &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"> </span><span class="pun">};</span><span class="pln"> mPostReference</span><span class="pun">.</span><span class="pln">addValueEventListener</span><span class="pun">(</span><span class="pln">postListener</span><span class="pun">);</span></pre>
+<p style="color:#212121;">
+    侦听器接收到一个&nbsp;DataSnapshot，其中包含事件发生时数据库中指定位置的数据。对快照调用&nbsp;getValue()&nbsp;时，将返回数据的 Java 对象表示形式。如果该位置不存在任何数据，则调用&nbsp;getValue()&nbsp;将返回&nbsp;null。
+</p>
+<p style="color:#212121;">
+    在本示例中，ValueEventListener&nbsp;还定义了&nbsp;onCancelled()&nbsp;方法。如果取消读取，则将调用该方法。 例如，如果客户端没有权限从 Firebase 数据库位置读取数据，则可取消读取。系统将为此方法传递一个&nbsp;DatabaseError&nbsp;对象，说明失败的原因。
+</p>
+<p>
+    <span style="color:#4F81BD;"><span style="color:#000000;font-size:18px;background-color:#C6D9F0;">子事件</span></span>
+</p>
+<p>
+    <span style="color:#4F81BD;"><span style="color:#000000;font-size:18px;background-color:#C6D9F0;"></span></span><span style="color:#212121;">为了响应通过某项操作（例如，通过&nbsp;</span>push()<span style="color:#212121;">&nbsp;方法添加新子节点或通过&nbsp;</span>updateChildren()<span style="color:#212121;">&nbsp;方法更新子节点）而对节点的子节点执行的特定操作，系统将触发子事件。对于侦听对数据库中特定节点所做的更改，结合使用上述每一种方法非常有用。</span>
+</p>
+<p style="color:#212121;">
+    例如，社交博客应用可以结合使用这些方法来监控博文评论中的活动，如下所示：
+</p>
+<pre class="prettyprint"><span class="typ" style="color:#9C27B0;">ChildEventListener</span><span class="pln"> childEventListener </span><span class="pun">=</span><span class="pln"> </span><span class="kwd" style="color:#3B78E7;">new</span><span class="pln"> </span><span class="typ" style="color:#9C27B0;">ChildEventListener</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> &nbsp; &nbsp; </span><span class="lit" style="color:#C53929;">@Override</span><span class="pln"> &nbsp; &nbsp; </span><span class="kwd" style="color:#3B78E7;">public</span><span class="pln"> </span><span class="kwd" style="color:#3B78E7;">void</span><span class="pln"> onChildAdded</span><span class="pun">(</span><span class="typ" style="color:#9C27B0;">DataSnapshot</span><span class="pln"> dataSnapshot</span><span class="pun">,</span><span class="pln"> </span><span class="typ" style="color:#9C27B0;">String</span><span class="pln"> previousChildName</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="typ" style="color:#9C27B0;">Log</span><span class="pun">.</span><span class="pln">d</span><span class="pun">(</span><span class="pln">TAG</span><span class="pun">,</span><span class="pln"> </span><span class="str" style="color:#0D904F;">"onChildAdded:"</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> dataSnapshot</span><span class="pun">.</span><span class="pln">getKey</span><span class="pun">());</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com" style="color:#D81B60;">// A new comment has been added, add it to the displayed list</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="typ" style="color:#9C27B0;">Comment</span><span class="pln"> comment </span><span class="pun">=</span><span class="pln"> dataSnapshot</span><span class="pun">.</span><span class="pln">getValue</span><span class="pun">(</span><span class="typ" style="color:#9C27B0;">Comment</span><span class="pun">.</span><span class="kwd" style="color:#3B78E7;">class</span><span class="pun">);</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com" style="color:#D81B60;">// ...</span><span class="pln"> &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"> &nbsp; &nbsp; </span><span class="lit" style="color:#C53929;">@Override</span><span class="pln"> &nbsp; &nbsp; </span><span class="kwd" style="color:#3B78E7;">public</span><span class="pln"> </span><span class="kwd" style="color:#3B78E7;">void</span><span class="pln"> onChildChanged</span><span class="pun">(</span><span class="typ" style="color:#9C27B0;">DataSnapshot</span><span class="pln"> dataSnapshot</span><span class="pun">,</span><span class="pln"> </span><span class="typ" style="color:#9C27B0;">String</span><span class="pln"> previousChildName</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="typ" style="color:#9C27B0;">Log</span><span class="pun">.</span><span class="pln">d</span><span class="pun">(</span><span class="pln">TAG</span><span class="pun">,</span><span class="pln"> </span><span class="str" style="color:#0D904F;">"onChildChanged:"</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> dataSnapshot</span><span class="pun">.</span><span class="pln">getKey</span><span class="pun">());</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com" style="color:#D81B60;">// A comment has changed, use the key to determine if we are displaying this</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com" style="color:#D81B60;">// comment and if so displayed the changed comment.</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="typ" style="color:#9C27B0;">Comment</span><span class="pln"> newComment </span><span class="pun">=</span><span class="pln"> dataSnapshot</span><span class="pun">.</span><span class="pln">getValue</span><span class="pun">(</span><span class="typ" style="color:#9C27B0;">Comment</span><span class="pun">.</span><span class="kwd" style="color:#3B78E7;">class</span><span class="pun">);</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="typ" style="color:#9C27B0;">String</span><span class="pln"> commentKey </span><span class="pun">=</span><span class="pln"> dataSnapshot</span><span class="pun">.</span><span class="pln">getKey</span><span class="pun">();</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com" style="color:#D81B60;">// ...</span><span class="pln"> &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"> &nbsp; &nbsp; </span><span class="lit" style="color:#C53929;">@Override</span><span class="pln"> &nbsp; &nbsp; </span><span class="kwd" style="color:#3B78E7;">public</span><span class="pln"> </span><span class="kwd" style="color:#3B78E7;">void</span><span class="pln"> onChildRemoved</span><span class="pun">(</span><span class="typ" style="color:#9C27B0;">DataSnapshot</span><span class="pln"> dataSnapshot</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="typ" style="color:#9C27B0;">Log</span><span class="pun">.</span><span class="pln">d</span><span class="pun">(</span><span class="pln">TAG</span><span class="pun">,</span><span class="pln"> </span><span class="str" style="color:#0D904F;">"onChildRemoved:"</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> dataSnapshot</span><span class="pun">.</span><span class="pln">getKey</span><span class="pun">());</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com" style="color:#D81B60;">// A comment has changed, use the key to determine if we are displaying this</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com" style="color:#D81B60;">// comment and if so remove it.</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="typ" style="color:#9C27B0;">String</span><span class="pln"> commentKey </span><span class="pun">=</span><span class="pln"> dataSnapshot</span><span class="pun">.</span><span class="pln">getKey</span><span class="pun">();</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com" style="color:#D81B60;">// ...</span><span class="pln"> &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"> &nbsp; &nbsp; </span><span class="lit" style="color:#C53929;">@Override</span><span class="pln"> &nbsp; &nbsp; </span><span class="kwd" style="color:#3B78E7;">public</span><span class="pln"> </span><span class="kwd" style="color:#3B78E7;">void</span><span class="pln"> onChildMoved</span><span class="pun">(</span><span class="typ" style="color:#9C27B0;">DataSnapshot</span><span class="pln"> dataSnapshot</span><span class="pun">,</span><span class="pln"> </span><span class="typ" style="color:#9C27B0;">String</span><span class="pln"> previousChildName</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="typ" style="color:#9C27B0;">Log</span><span class="pun">.</span><span class="pln">d</span><span class="pun">(</span><span class="pln">TAG</span><span class="pun">,</span><span class="pln"> </span><span class="str" style="color:#0D904F;">"onChildMoved:"</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> dataSnapshot</span><span class="pun">.</span><span class="pln">getKey</span><span class="pun">());</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com" style="color:#D81B60;">// A comment has changed position, use the key to determine if we are</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com" style="color:#D81B60;">// displaying this comment and if so move it.</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="typ" style="color:#9C27B0;">Comment</span><span class="pln"> movedComment </span><span class="pun">=</span><span class="pln"> dataSnapshot</span><span class="pun">.</span><span class="pln">getValue</span><span class="pun">(</span><span class="typ" style="color:#9C27B0;">Comment</span><span class="pun">.</span><span class="kwd" style="color:#3B78E7;">class</span><span class="pun">);</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="typ" style="color:#9C27B0;">String</span><span class="pln"> commentKey </span><span class="pun">=</span><span class="pln"> dataSnapshot</span><span class="pun">.</span><span class="pln">getKey</span><span class="pun">();</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com" style="color:#D81B60;">// ...</span><span class="pln"> &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"> &nbsp; &nbsp; </span><span class="lit" style="color:#C53929;">@Override</span><span class="pln"> &nbsp; &nbsp; </span><span class="kwd" style="color:#3B78E7;">public</span><span class="pln"> </span><span class="kwd" style="color:#3B78E7;">void</span><span class="pln"> onCancelled</span><span class="pun">(</span><span class="typ" style="color:#9C27B0;">DatabaseError</span><span class="pln"> databaseError</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="typ" style="color:#9C27B0;">Log</span><span class="pun">.</span><span class="pln">w</span><span class="pun">(</span><span class="pln">TAG</span><span class="pun">,</span><span class="pln"> </span><span class="str" style="color:#0D904F;">"postComments:onCancelled"</span><span class="pun">,</span><span class="pln"> databaseError</span><span class="pun">.</span><span class="pln">toException</span><span class="pun">());</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="typ" style="color:#9C27B0;">Toast</span><span class="pun">.</span><span class="pln">makeText</span><span class="pun">(</span><span class="pln">mContext</span><span class="pun">,</span><span class="pln"> </span><span class="str" style="color:#0D904F;">"Failed to load comments."</span><span class="pun">,</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="typ" style="color:#9C27B0;">Toast</span><span class="pun">.</span><span class="pln">LENGTH_SHORT</span><span class="pun">).</span><span class="pln">show</span><span class="pun">();</span><span class="pln"> &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"> </span><span class="pun">};</span><span class="pln"> </span><span class="kwd" style="color:#3B78E7;">ref</span><span class="pun">.</span><span class="pln">addChildEventListener</span><span class="pun">(</span><span class="pln">childEventListener</span><span class="pun">);</span></pre>
+<p style="color:#212121;">
+    onChildAdded()&nbsp;回调通常用于在 Firebase 数据库中检索项目列表。onChildAdded()&nbsp;回调将针对每个现有的子节点触发一次，并在每次向指定的路径添加新的子节点时再次触发。
+</p>
+<p style="color:#212121;">
+    系统将为侦听器传递包含新子节点数据的快照。
+</p>
+<p style="color:#212121;">
+    每次修改子节点时，均会触发&nbsp;onChildChanged()&nbsp;回调。这包括对子节点的后代所做的任何修改。该回调通常与&nbsp;onChildAdded()&nbsp;和&nbsp;onChildRemoved()&nbsp;回调一起使用，以响应对项目列表所做的更改。传递给事件侦听器的快照包含子节点的更新数据。
+</p>
+<p style="color:#212121;">
+    删除直接子节点时，将会触发&nbsp;onChildRemoved()&nbsp;回调。该回调通常与&nbsp;onChildAdded()&nbsp;和&nbsp;onChildChanged()&nbsp;回调一起使用。传递给事件回调的快照包含已删除的子节点的数据。
+</p>
+<p style="color:#212121;">
+    每当因更新（导致子节点重新排序）而触发&nbsp;onChildChanged()&nbsp;回调时，系统就会触发&nbsp;onChildMoved()&nbsp;回调。 该回调与按优先级排序的数据结合使用。
+</p>
+<h2 style="font-size:24px;color:#212121;">
+    <span style="font-size:19px;">分离侦听器</span>
+</h2>
+<p style="color:#212121;">
+    通过在 Firebase 数据库引用上调用&nbsp;removeEventListener()&nbsp;方法即可删除回调。
+</p>
+<p style="color:#212121;">
+    如果多次将侦听器添加到某一数据位置，则将为每个事件多次调用侦听器，并且您必须分离相同的次数才能将其完全删除。
+</p>
+<p style="color:#212121;">
+    在父侦听器上调用&nbsp;removeEventListener()&nbsp;时不会自动删除在其子节点上注册的侦听器；还必须在任何子侦听器上调用&nbsp;removeEventListener()&nbsp;才能删除回调。
+</p>
+<p>
+    <br />
+</p>
+<h2 style="font-size:24px;color:#212121;">
+    <span style="font-size:19px;">读取数据一次（丧心病狂）</span>
+</h2>
+<p style="color:#212121;">
+    在某些情况下，您可能希望调用一次回调后立即将其删除（例如，在初始化预期不会发生更改的 UI 元素时）。您可以使用&nbsp;addListenerForSingleValueEvent()&nbsp;方法简化这种情况：回调仅触发一次，以后不会再次触发。
+</p>
+<p style="color:#212121;">
+    对于只需加载一次且预计不会频繁变化或需要主动侦听的数据，这非常有用。 例如，上述示例中的博客应用使用此方法在用户开始撰写新博文时加载其个人资料：
+</p>
+<pre class="prettyprint"><span class="kwd" style="color:#3B78E7;">final</span><span class="pln"> </span><span class="typ" style="color:#9C27B0;">String</span><span class="pln"> userId </span><span class="pun">=</span><span class="pln"> getUid</span><span class="pun">();</span><span class="pln"> mDatabase</span><span class="pun">.</span><span class="pln">child</span><span class="pun">(</span><span class="str" style="color:#0D904F;">"users"</span><span class="pun">).</span><span class="pln">child</span><span class="pun">(</span><span class="pln">userId</span><span class="pun">).</span><span class="pln">addListenerForSingleValueEvent</span><span class="pun">(</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd" style="color:#3B78E7;">new</span><span class="pln"> </span><span class="typ" style="color:#9C27B0;">ValueEventListener</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="lit" style="color:#C53929;">@Override</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd" style="color:#3B78E7;">public</span><span class="pln"> </span><span class="kwd" style="color:#3B78E7;">void</span><span class="pln"> onDataChange</span><span class="pun">(</span><span class="typ" style="color:#9C27B0;">DataSnapshot</span><span class="pln"> dataSnapshot</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com" style="color:#D81B60;">// Get user value</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="typ" style="color:#9C27B0;">User</span><span class="pln"> user </span><span class="pun">=</span><span class="pln"> dataSnapshot</span><span class="pun">.</span><span class="pln">getValue</span><span class="pun">(</span><span class="typ" style="color:#9C27B0;">User</span><span class="pun">.</span><span class="kwd" style="color:#3B78E7;">class</span><span class="pun">);</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com" style="color:#D81B60;">// ...</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="lit" style="color:#C53929;">@Override</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd" style="color:#3B78E7;">public</span><span class="pln"> </span><span class="kwd" style="color:#3B78E7;">void</span><span class="pln"> onCancelled</span><span class="pun">(</span><span class="typ" style="color:#9C27B0;">DatabaseError</span><span class="pln"> databaseError</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="typ" style="color:#9C27B0;">Log</span><span class="pun">.</span><span class="pln">w</span><span class="pun">(</span><span class="pln">TAG</span><span class="pun">,</span><span class="pln"> </span><span class="str" style="color:#0D904F;">"getUser:onCancelled"</span><span class="pun">,</span><span class="pln"> databaseError</span><span class="pun">.</span><span class="pln">toException</span><span class="pun">());</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com" style="color:#D81B60;">// ...</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">});</span></pre>
+<p>
+    <br />
+</p>
+<h2 style="font-size:24px;color:#212121;">
+    <span style="font-size:19px;">排序和过滤数据</span>
+</h2>
+<p style="color:#212121;">
+    您可以使用 Realtime Database&nbsp;Query&nbsp;类检索按键、按值、按子节点的值或按优先级排序的数据。 您还可以对排序后的结果进行过滤，从而得到特定数量的结果或一系列键或值。
+</p>
+<p style="color:#212121;">
+    注：过滤和排序操作的开销可能会很大，在客户端执行这些操作时尤其如此。 如果您的应用使用了查询，请定义&nbsp;.indexOn&nbsp;规则，以便在服务器上将这些键编制索引并提高查询性能
+</p>
+<h3 style="font-size:20px;color:#212121;">
+    <strong><span style="font-size:18px;">排序数据</span></strong>
+</h3>
+<p style="color:#212121;">
+    要检索排序数据，请先指定排序依据方法之一，确定如何对结果排序（4种方法）：
+</p>
+<p style="color:#212121;">
+    <span style="font-size:14px;background-color:rgba(255, 255, 255, 0.95);">orderByChild(</span><span style="font-size:14px;background-color:rgba(255, 255, 255, 0.95);">)</span>
+</p>
+<p style="color:#212121;">
+    <span style="background-color:rgba(255, 255, 255, 0.95);font-size:14px;">用法：</span><span style="background-color:rgba(255, 255, 255, 0.95);font-size:14px;">按指定子键的值对结果排序。</span>
+</p>
+<p style="color:#212121;">
+    <br />
+</p>
+<p style="color:#212121;">
+    <span style="background-color:rgba(255, 255, 255, 0.95);font-size:14px;">orderByKey(</span><span style="background-color:rgba(255, 255, 255, 0.95);font-size:14px;">)</span>
+</p>
+<p style="color:#212121;">
+    <span style="font-size:14px;background-color:rgba(255, 255, 255, 0.95);">用法：按子键对结果排序。</span>
+</p>
+<p style="color:#212121;">
+    <br />
+</p>
+<p style="color:#212121;">
+    <span style="font-size:14px;background-color:rgba(255, 255, 255, 0.95);">orderByValue()</span>
+</p>
+<p style="color:#212121;">
+    <span style="font-size:14px;background-color:rgba(255, 255, 255, 0.95);">用法：按子值对结果排序。</span>
+</p>
+<p style="color:#212121;">
+    <br />
+</p>
+<p style="color:#212121;">
+    <span style="font-size:14px;background-color:rgba(255, 255, 255, 0.95);">orderByPriority()</span>
+</p>
+<p style="color:#212121;">
+    <span style="font-size:14px;background-color:rgba(255, 255, 255, 0.95);">用法：按节点的指定优先级对结果排序。</span>
+</p>
+<p style="color:#212121;">
+    <strong><span style="font-size:14px;background-color:rgba(255, 255, 255, 0.95);color:#FF0000;">每次只能使用<strong>一种</strong>排序依据方法。对同一查询多次调用排序依据方法会引发错误。</span></strong>
+</p>
+<p style="color:#212121;">
+    以下示例演示了如何检索用户置顶博文（按星级数排序）的列表：
+</p>
+<pre class="prettyprint"><span class="com" style="color:#D81B60;">// My top posts by number of stars</span><span class="pln"> </span><span class="typ" style="color:#9C27B0;">String</span><span class="pln"> myUserId </span><span class="pun">=</span><span class="pln"> getUid</span><span class="pun">();</span><span class="pln"> </span><span class="typ" style="color:#9C27B0;">Query</span><span class="pln"> myTopPostsQuery </span><span class="pun">=</span><span class="pln"> databaseReference</span><span class="pun">.</span><span class="pln">child</span><span class="pun">(</span><span class="str" style="color:#0D904F;">"user-posts"</span><span class="pun">).</span><span class="pln">child</span><span class="pun">(</span><span class="pln">myUserId</span><span class="pun">)</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">.</span><span class="pln">orderByChild</span><span class="pun">(</span><span class="str" style="color:#0D904F;">"starCount"</span><span class="pun">);</span></pre>
+<h3 style="font-size:20px;color:#212121;">
+    <strong><span style="font-size:18px;">过滤数据</span></strong>
+</h3>
+<p>
+    <span style="color:#212121;">要过滤数据，您可以结合使用限制或范围方法之一与排序依据方法来构造查询（5种方法）。</span>
+</p>
+<p>
+    <span style="color:#212121;font-size:14px;background-color:rgba(255, 255, 255, 0.95);">limitToFirst(</span><span style="color:#212121;font-size:14px;background-color:rgba(255, 255, 255, 0.95);">)</span>
+</p>
+<p>
+    <span style="color:#212121;font-size:14px;background-color:rgba(255, 255, 255, 0.95);">用法：设置要从排序结果列表开头返回的最大项目数。</span>
+</p>
+<p>
+    <br />
+</p>
+<p>
+    <span style="color:#212121;font-size:14px;background-color:rgba(255, 255, 255, 0.95);">limitToLast()</span>
+</p>
+<p>
+    <span style="color:#212121;font-size:14px;background-color:rgba(255, 255, 255, 0.95);">用法：设置要从排序结果列表结尾返回的最大项目数。</span>
+</p>
+<p>
+    <br />
+</p>
+<p>
+    <span style="color:#212121;font-size:14px;background-color:rgba(255, 255, 255, 0.95);">startAt()</span>
+</p>
+<p>
+    <span style="color:#212121;font-size:14px;background-color:rgba(255, 255, 255, 0.95);">用法：返回大于或等于指定键、值或优先级的项目，具体取决于所选的排序依据方法。</span>
+</p>
+<p>
+    <br />
+</p>
+<p>
+    <span style="color:#212121;font-size:14px;background-color:rgba(255, 255, 255, 0.95);">endAt()</span>
+</p>
+<p>
+    <span style="color:#212121;font-size:14px;background-color:rgba(255, 255, 255, 0.95);">用法：返回小于或等于指定键、值或优先级的项目，具体取决于所选的排序依据方法。</span>
+</p>
+<p>
+    <br />
+</p>
+<p>
+    <span style="color:#212121;font-size:14px;background-color:rgba(255, 255, 255, 0.95);">equalTo()</span>
+</p>
+<p>
+    <span style="color:#212121;font-size:14px;background-color:rgba(255, 255, 255, 0.95);">用法：返回等于指定键、值或优先级的项目，具体取决于所选的排序依据方法。</span>
+</p>
+<p>
+    <br />
+</p>
+<p>
+    <strong><span style="font-size:14px;background-color:rgba(255, 255, 255, 0.95);color:#4F81BD;">与排序依据方法不同，您可以结合使用多种限制或范围函数。例如，您可以结合使用&nbsp;startAt()&nbsp;与&nbsp;endAt()&nbsp;方法将结果限制在值的指定范围内。</span></strong>
+</p>
+<p>
+    <br />
+</p>
+<p>
+    <strong>限制结果数</strong>
+</p>
+<p style="color:#212121;">
+    使用&nbsp;limitToFirst()&nbsp;和&nbsp;limitToLast()&nbsp;方法设置要针对给定回调同步的最大子节点数。 例如，如果使用&nbsp;limitToFirst()&nbsp;限定为 100，则起初最多会收到 100 个&nbsp;onChildAdded()&nbsp;回调。
+</p>
+<p style="color:#212121;">
+    如果您在 Firebase 数据库中存储的项目不到 100 个，则每个项目均会触发一次&nbsp;onChildAdded()&nbsp;回调。
+</p>
+<p style="color:#212121;">
+    随着项目发生更改，对于进入查询的项目，您将收到&nbsp;onChildAdded()&nbsp;回调；对于退出查询的项目，则将收到&nbsp;onChildRemoved()&nbsp;回调，从而使总数始终保持为 100。
+</p>
+<p style="color:#212121;">
+    以下示例演示了示例博客应用如何定义查询以按所有用户检索 100 篇最新博文的列表：
+</p>
+<pre class="prettyprint"><span class="com" style="color:#D81B60;">// Last 100 posts, these are automatically the 100 most recent</span><span class="pln"> </span><span class="com" style="color:#D81B60;">// due to sorting by push() keys</span><span class="pln"> </span><span class="typ" style="color:#9C27B0;">Query</span><span class="pln"> recentPostsQuery </span><span class="pun">=</span><span class="pln"> databaseReference</span><span class="pun">.</span><span class="pln">child</span><span class="pun">(</span><span class="str" style="color:#0D904F;">"posts"</span><span class="pun">)</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">.</span><span class="pln">limitToFirst</span><span class="pun">(</span><span class="lit" style="color:#C53929;">100</span><span class="pun">);</span></pre>
+<p style="color:#212121;">
+    本示例仅定义了一个查询，要实际同步数据，需要附加侦听器。
+</p>
+<h4 style="font-size:18px;color:#212121;">
+    <strong>按键、值或优先级过滤</strong>
+</h4>
+<p>
+    <span style="color:#212121;">您可以使用&nbsp;</span>startAt()<span style="color:#212121;">、</span>endAt()<span style="color:#212121;">&nbsp;和&nbsp;</span>equalTo()<span style="color:#212121;">&nbsp;为查询选择任意起点、终点和当量点。 这对于将数据分页或查找其子节点为特定值的项目非常有用。</span>
+</p>
+<p>
+    <br />
+</p>
+<p>
+    <strong>对查询数据进行排序</strong>
+</p>
+<p>
+    <strong><span style="color:#4F81BD;">介绍一下如何通过&nbsp;</span><span style="color:#4F81BD;">Query</span><span style="color:#4F81BD;">&nbsp;类中的每种排序依据方法对数据进行排序。</span></strong>
+</p>
+<h4 style="font-size:18px;color:#212121;">
+    orderByChild当使用&nbsp;orderByChild()&nbsp;时，系统将按如下方式对包含指定子键的数据进行排序：
+</h4>
+<ol class=" list-paddingleft-2" style="color:#212121;">
+    <li>
+        <p>
+            指定子键为&nbsp;null&nbsp;值的子节点显示在最前面。
+        </p>
+    </li>
+    <li>
+        <p>
+            指定子键为&nbsp;false&nbsp;值的子节点紧随其后。 如果多个子节点的值均为&nbsp;false，则按键以字典顺序对其进行排序。
+        </p>
+    </li>
+    <li>
+        <p>
+            指定子键为&nbsp;true&nbsp;值的子节点紧随其后。 如果多个子节点的值均为&nbsp;true，则按键以字典顺序对其进行排序。
+        </p>
+    </li>
+    <li>
+        <p>
+            指定子键为数值的子节点紧随其后，按升序排序。如果多个子节点的指定子键具有相同的数值，则按键对其进行排序。
+        </p>
+    </li>
+    <li>
+        <p>
+            字符串显示在数字后面并按字典顺序以升序排列。 如果多个子节点的指定子键具有相同的值，则按键以字典顺序对其进行排序。
+        </p>
+    </li>
+    <li>
+        <p>
+            对象放在最后，并根据键名按字典顺序以升序排列。
+        </p>
+    </li>
+</ol>
+<h4 style="font-size:18px;color:#212121;">
+    orderByKey
+</h4>
+<p style="color:#212121;">
+    当使用&nbsp;orderByKey()&nbsp;对数据进行排序时，系统会按键名以升序返回数据。
+</p>
+<ol class=" list-paddingleft-2" style="color:#212121;">
+    <li>
+        <p>
+            键可以解析为 32 位整数的子节点显示在前面，按升序排序。
+        </p>
+    </li>
+    <li>
+        <p>
+            以字符串值作为键的子节点紧随其后，按字典顺序以升序排列。
+        </p>
+    </li>
+</ol>
+<h4 style="font-size:18px;color:#212121;">
+    orderByValue
+</h4>
+<p style="color:#212121;">
+    使用&nbsp;orderByValue()&nbsp;时，系统将按相应值对子节点进行排序。排序标准与&nbsp;orderByChild()&nbsp;中相同，但这里使用节点的值而非指定子键的值。
+</p>
+<h4 style="font-size:18px;color:#212121;">
+    orderByPriority
+</h4>
+<p style="color:#212121;">
+    如果已通过&nbsp;setPriority()&nbsp;指定数据的优先级，则可使用&nbsp;orderByPriority()&nbsp;对数据进行排序。 在这种情况下，子节点的排序取决于其优先级和键，如下所示：
+</p>
+<ol class=" list-paddingleft-2" style="color:#212121;">
+    <li>
+        <p>
+            无优先级（默认设置）的子节点显示在前面。
+        </p>
+    </li>
+    <li>
+        <p>
+            以数字作为优先级的子节点紧随其后。它们按优先级以数字顺序从小到大进行排序。
+        </p>
+    </li>
+    <li>
+        <p>
+            以字符串作为优先级的子节点放在最后。它们按优先级以字典顺序进行排序。
+        </p>
+    </li>
+    <li>
+        <p>
+            当两个子节点的优先级相同（包括无优先级）时，将按键对其进行排序。 数字键显示在最前面（按数字以升序排列），接着是其余键（按字典顺序以升序排列）。
+        </p>
+    </li>
+</ol>
+<p style="color:#212121;">
+    优先级值只能是数字或字符串。 数字优先级以 IEEE 754 双精度浮点数形式存储并排序。 键始终存储为字符串，仅当可以解析为 32 位整数时才视为数字。
+</p>
+<p>
+    <br />
+</p>
+<img src="https://mmbiz.qlogo.cn/mmbiz_png/fgnkxfGnnkTMNtGy7KWfCrdJibAYY6HtIeOpQc0iaRNeAWWoBHNsMZEFmY9TtQEfWKdwdTWLuslYLTaH9qxs4NXQ/0?" class="" style="height:auto !important;width:50px;" /><span style="font-size:15px;color:#7F7F7F;">在Android中启用离线功能</span>
+<p style="color:#3E3E3E;">
+    <span style="font-size:15px;color:#82D0E7;"><span style="color:#212121;">Firebase 应用具有强大的离线功能，且有几款功能能够显著提升离线使用体验。启用磁盘持久化可让应用在重启后依然保留其所有状态。我们提供一些用于监控在线和连接状态的工具。</span></span>
+</p>
+<p style="color:#3E3E3E;">
+    Firebase会自动处理网络中断时的数据缓存，当网络重新连接时，再重新发送缓存的数据。通过代码运行Firebase缓存时使用磁盘持久化，这样即使app被重启，数据依然有效。
+</p>
+<pre class="prettyprint"><span class="typ" style="color:#9C27B0;">FirebaseDatabase</span><span class="pun">.</span><span class="pln">getInstance</span><span class="pun">().</span><span class="pln">setPersistenceEnabled</span><span class="pun">(</span><span class="kwd" style="color:#3B78E7;">true</span><span class="pun">);</span></pre>
+<p style="color:#3E3E3E;">
+    <br />
+</p>
+<p style="color:#3E3E3E;">
+    <strong>保持最新的数据</strong>
+</p>
+<pre class="prettyprint"><span class="typ" style="color:#9C27B0;">DatabaseReference</span><span class="pln"> scoresRef </span><span class="pun">=</span><span class="pln"> </span><span class="typ" style="color:#9C27B0;">FirebaseDatabase</span><span class="pun">.</span><span class="pln">getInstance</span><span class="pun">().</span><span class="pln">getReference</span><span class="pun">(</span><span class="str" style="color:#0D904F;">"scores"</span><span class="pun">);</span><span class="pln"> scoresRef</span><span class="pun">.</span><span class="pln">keepSynced</span><span class="pun">(</span><span class="kwd" style="color:#3B78E7;">true</span><span class="pun">);</span></pre>
+<p style="color:#3E3E3E;">
+    这样客户端会自动从服务器下载更新数据，如果禁止自动更新：
+</p>
+<pre class="prettyprint"><span class="pln">scoresRef</span><span class="pun">.</span><span class="pln">keepSynced</span><span class="pun">(</span><span class="kwd" style="color:#3B78E7;">false</span><span class="pun">);</span></pre>
+<p style="color:#3E3E3E;">
+    Firebase默认的缓存空间为10MB，如何缓存数据超过10MB，最早的数据将被清除。如果数据设置了keepSynced，则不会被清除。
+</p>
+<p style="color:#3E3E3E;">
+    <br />
+</p>
+<p style="color:#3E3E3E;">
+    <strong>离线数据查询</strong>
+</p>
+<p style="color:#3E3E3E;">
+    当app处于离线状态时，查询数据时，会从缓存数据中进行查询，当app重新连接网络时，Firebase会从网络下载最新的数据，并触发查询。
+</p>
+<p style="color:#3E3E3E;">
+    <br />
+</p>
+<p style="color:#3E3E3E;">
+    以下代码示例演示了查询博客最新的4条评分数据。
+</p>
+<pre class="prettyprint"><span class="typ" style="color:#9C27B0;">DatabaseReference</span><span class="pln"> scoresRef </span><span class="pun">=</span><span class="pln"> </span><span class="typ" style="color:#9C27B0;">FirebaseDatabase</span><span class="pun">.</span><span class="pln">getInstance</span><span class="pun">().</span><span class="pln">getReference</span><span class="pun">(</span><span class="str" style="color:#0D904F;">"scores"</span><span class="pun">);</span><span class="pln"> scoresRef</span><span class="pun">.</span><span class="pln">orderByValue</span><span class="pun">().</span><span class="pln">limitToLast</span><span class="pun">(</span><span class="lit" style="color:#C53929;">4</span><span class="pun">).</span><span class="pln">addChildEventListener</span><span class="pun">(</span><span class="kwd" style="color:#3B78E7;">new</span><span class="pln"> </span><span class="typ" style="color:#9C27B0;">ChildEventListener</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> &nbsp; &nbsp; </span><span class="lit" style="color:#C53929;">@Override</span><span class="pln"> &nbsp; &nbsp; </span><span class="kwd" style="color:#3B78E7;">public</span><span class="pln"> </span><span class="kwd" style="color:#3B78E7;">void</span><span class="pln"> onChildAdded</span><span class="pun">(</span><span class="typ" style="color:#9C27B0;">DataSnapshot</span><span class="pln"> snapshot</span><span class="pun">,</span><span class="pln"> </span><span class="typ" style="color:#9C27B0;">String</span><span class="pln"> previousChild</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> &nbsp; &nbsp; &nbsp; </span><span class="typ" style="color:#9C27B0;">System</span><span class="pun">.</span><span class="kwd" style="color:#3B78E7;">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="str" style="color:#0D904F;">"The "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> snapshot</span><span class="pun">.</span><span class="pln">getKey</span><span class="pun">()</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><span class="str" style="color:#0D904F;">" dinosaur's score is "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> snapshot</span><span class="pun">.</span><span class="pln">getValue</span><span class="pun">());</span><span class="pln"> &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"> </span><span class="pun">});</span></pre>
+<p style="color:#3E3E3E;">
+    现在，如果app网络连接断开，还是以上查询，我们查询最新的2条数据：
+</p>
+<pre class="prettyprint"><span class="pln">scoresRef</span><span class="pun">.</span><span class="pln">orderByValue</span><span class="pun">().</span><span class="pln">limitToLast</span><span class="pun">(</span><span class="lit" style="color:#C53929;">2</span><span class="pun">).</span><span class="pln">addChildEventListener</span><span class="pun">(</span><span class="kwd" style="color:#3B78E7;">new</span><span class="pln"> </span><span class="typ" style="color:#9C27B0;">ChildEventListener</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> &nbsp; &nbsp; </span><span class="lit" style="color:#C53929;">@Override</span><span class="pln"> &nbsp; &nbsp; </span><span class="kwd" style="color:#3B78E7;">public</span><span class="pln"> </span><span class="kwd" style="color:#3B78E7;">void</span><span class="pln"> onChildAdded</span><span class="pun">(</span><span class="typ" style="color:#9C27B0;">DataSnapshot</span><span class="pln"> snapshot</span><span class="pun">,</span><span class="pln"> </span><span class="typ" style="color:#9C27B0;">String</span><span class="pln"> previousChild</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="typ" style="color:#9C27B0;">System</span><span class="pun">.</span><span class="kwd" style="color:#3B78E7;">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="str" style="color:#0D904F;">"The "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> snapshot</span><span class="pun">.</span><span class="pln">getKey</span><span class="pun">()</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><span class="str" style="color:#0D904F;">" dinosaur's score is "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> snapshot</span><span class="pun">.</span><span class="pln">getValue</span><span class="pun">());</span><span class="pln"> &nbsp; &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"> </span><span class="pun">});</span></pre>
+<p style="color:#3E3E3E;">
+    <strong>处理离线事务</strong>
+</p>
+<p>
+    <span style="color:#212121;">任何离线事务操作，将会被放到请求队列中，当app重新连接网络时，重新发送。</span>
+</p>
+<p>
+    <br />
+</p>
+<p>
+    <strong><span style="color:#212121;"><span style="color:#FF0000;">注意：事务请求，不会被持久化到磁盘，app重启后会消失。</span></span></strong>
+</p>
+<p style="color:#3E3E3E;">
+    <br />
+</p>
+<p style="color:#3E3E3E;">
+    <strong>处理网络断开那一刻(事必躬亲)</strong>
+</p>
+<pre class="prettyprint"><span class="typ" style="color:#9C27B0;">DatabaseRef</span><span class="pln"> presenceRef </span><span class="pun">=</span><span class="pln"> </span><span class="typ" style="color:#9C27B0;">FirebaseDatabase</span><span class="pun">.</span><span class="pln">getInstance</span><span class="pun">().</span><span class="pln">getReference</span><span class="pun">(</span><span class="str" style="color:#0D904F;">"disconnectmessage"</span><span class="pun">);</span><span class="pln"> </span><span class="com" style="color:#D81B60;">// Write a string when this client loses connection</span><span class="pln"> presenceRef</span><span class="pun">.</span><span class="pln">onDisconnect</span><span class="pun">().</span><span class="pln">setValue</span><span class="pun">(</span><span class="str" style="color:#0D904F;">"I disconnected!"</span><span class="pun">);</span></pre>
+<p style="color:#3E3E3E;">
+    以下示例，确保离线时的操作成功进行：
+</p>
+<pre class="prettyprint"><span class="pln">presenceRef</span><span class="pun">.</span><span class="pln">onDisconnect</span><span class="pun">().</span><span class="pln">removeValue</span><span class="pun">(</span><span class="kwd" style="color:#3B78E7;">new</span><span class="pln"> </span><span class="typ" style="color:#9C27B0;">DatabaseReference</span><span class="pun">.</span><span class="typ" style="color:#9C27B0;">CompletionListener</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> &nbsp; &nbsp; </span><span class="lit" style="color:#C53929;">@Override</span><span class="pln"> &nbsp; &nbsp; </span><span class="kwd" style="color:#3B78E7;">public</span><span class="pln"> </span><span class="kwd" style="color:#3B78E7;">void</span><span class="pln"> onComplete</span><span class="pun">(</span><span class="typ" style="color:#9C27B0;">DatabaseError</span><span class="pln"> error</span><span class="pun">,</span><span class="pln"> </span><span class="typ" style="color:#9C27B0;">DatabaseReference</span><span class="pln"> firebase</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd" style="color:#3B78E7;">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">error </span><span class="pun">!=</span><span class="pln"> </span><span class="kwd" style="color:#3B78E7;">null</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="typ" style="color:#9C27B0;">System</span><span class="pun">.</span><span class="kwd" style="color:#3B78E7;">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="str" style="color:#0D904F;">"could not establish onDisconnect event:"</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> error</span><span class="pun">.</span><span class="pln">getMessage</span><span class="pun">());</span><span class="pln"> &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"> &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"> </span><span class="pun">});</span></pre>
+<p style="color:#3E3E3E;">
+    <span style="color:#212121;">onDisconnect事件操作也可以中途取消（我反悔了）</span>
+</p>
+<pre class="prettyprint"><span class="typ" style="color:#9C27B0;">OnDisconnect</span><span class="pln"> onDisconnectRef </span><span class="pun">=</span><span class="pln"> presenceRef</span><span class="pun">.</span><span class="pln">onDisconnect</span><span class="pun">();</span><span class="pln"> onDisconnectRef</span><span class="pun">.</span><span class="pln">setValue</span><span class="pun">(</span><span class="str" style="color:#0D904F;">"I disconnected"</span><span class="pun">);</span><span class="pln"> </span><span class="com" style="color:#D81B60;">// some time later when we change our minds</span><span class="pln"> onDisconnectRef</span><span class="pun">.</span><span class="pln">cancel</span><span class="pun">();</span></pre>
+<p style="color:#3E3E3E;">
+    <br />
+</p>
+<p style="color:#3E3E3E;">
+    <strong>处理网络连接上那一刻(事必躬亲)&nbsp;</strong>
+</p>
+<p style="color:#3E3E3E;">
+    <br />
+</p>
+<p style="color:#3E3E3E;">
+    <strong>Firebase为网络连接状态提供了一个特殊位置/.info/connected&nbsp;</strong>
+</p>
+<pre class="prettyprint"><span class="typ" style="color:#9C27B0;">DatabaseReference</span><span class="pln"> connectedRef </span><span class="pun">=</span><span class="pln"> </span><span class="typ" style="color:#9C27B0;">FirebaseDatabase</span><span class="pun">.</span><span class="pln">getInstance</span><span class="pun">().</span><span class="pln">getReference</span><span class="pun">(</span><span class="str" style="color:#0D904F;">".info/connected"</span><span class="pun">);</span><span class="pln"> connectedRef</span><span class="pun">.</span><span class="pln">addValueEventListener</span><span class="pun">(</span><span class="kwd" style="color:#3B78E7;">new</span><span class="pln"> </span><span class="typ" style="color:#9C27B0;">ValueEventListener</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> &nbsp; </span><span class="lit" style="color:#C53929;">@Override</span><span class="pln"> &nbsp; </span><span class="kwd" style="color:#3B78E7;">public</span><span class="pln"> </span><span class="kwd" style="color:#3B78E7;">void</span><span class="pln"> onDataChange</span><span class="pun">(</span><span class="typ" style="color:#9C27B0;">DataSnapshot</span><span class="pln"> snapshot</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> &nbsp; &nbsp; </span><span class="kwd" style="color:#3B78E7;">boolean</span><span class="pln"> connected </span><span class="pun">=</span><span class="pln"> snapshot</span><span class="pun">.</span><span class="pln">getValue</span><span class="pun">(</span><span class="typ" style="color:#9C27B0;">Boolean</span><span class="pun">.</span><span class="kwd" style="color:#3B78E7;">class</span><span class="pun">);</span><span class="pln"> &nbsp; &nbsp; </span><span class="kwd" style="color:#3B78E7;">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">connected</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> &nbsp; &nbsp; &nbsp; </span><span class="typ" style="color:#9C27B0;">System</span><span class="pun">.</span><span class="kwd" style="color:#3B78E7;">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="str" style="color:#0D904F;">"connected"</span><span class="pun">);</span><span class="pln"> &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"> </span><span class="kwd" style="color:#3B78E7;">else</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> &nbsp; &nbsp; &nbsp; </span><span class="typ" style="color:#9C27B0;">System</span><span class="pun">.</span><span class="kwd" style="color:#3B78E7;">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="str" style="color:#0D904F;">"not connected"</span><span class="pun">);</span><span class="pln"> &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"> &nbsp; </span><span class="pun">}</span><span class="pln"> &nbsp; </span><span class="lit" style="color:#C53929;">@Override</span><span class="pln"> &nbsp; </span><span class="kwd" style="color:#3B78E7;">public</span><span class="pln"> </span><span class="kwd" style="color:#3B78E7;">void</span><span class="pln"> onCancelled</span><span class="pun">(</span><span class="typ" style="color:#9C27B0;">DatabaseError</span><span class="pln"> error</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> &nbsp; &nbsp; </span><span class="typ" style="color:#9C27B0;">System</span><span class="pun">.</span><span class="pln">err</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="str" style="color:#0D904F;">"Listener was cancelled"</span><span class="pun">);</span><span class="pln"> &nbsp; </span><span class="pun">}</span><span class="pln"> </span><span class="pun">});</span></pre>
+<p style="color:#3E3E3E;">
+    <br />
+</p>
+<p>
+    <span style="color:#212121;">在android设备上，Firebase会自动管理数据的网络连接，这样可以节约带宽和电量。如果客户端没有活跃的listenter，没有等待的write或onDisconnect并且没有被明确断开（goOffline），Firebase会在60秒后自动断开网络连接。</span>
+</p>
+<p>
+    <br />
+</p>
+<p>
+    <strong>处理异常</strong>
+</p>
+<p>
+    <span style="color:#212121;">Firebase能够插入时间戳，以下示例能清楚知道客户端短线的时间：</span>
+</p>
+<pre class="prettyprint"><span class="typ" style="color:#9C27B0;">DatabaseReference</span><span class="pln"> userLastOnlineRef </span><span class="pun">=</span><span class="pln"> </span><span class="typ" style="color:#9C27B0;">FirebaseDatabse</span><span class="pun">.</span><span class="pln">getInstance</span><span class="pun">().</span><span class="pln">getReference</span><span class="pun">(</span><span class="str" style="color:#0D904F;">"users/joe/lastOnline"</span><span class="pun">);</span><span class="pln"> userLastOnlineRef</span><span class="pun">.</span><span class="pln">onDisconnect</span><span class="pun">().</span><span class="pln">setValue</span><span class="pun">(</span><span class="typ" style="color:#9C27B0;">ServerValue</span><span class="pun">.</span><span class="pln">TIMESTAMP</span><span class="pun">);</span></pre>
+<h3 style="font-size:20px;color:#212121;">
+    <strong>时钟偏斜（Clock Skew）处理</strong>
+</h3>
+<pre class="prettyprint"><span class="typ" style="color:#9C27B0;">DatabaseReference</span><span class="pln"> offsetRef </span><span class="pun">=</span><span class="pln"> </span><span class="typ" style="color:#9C27B0;">FirebaseDatabase</span><span class="pun">.</span><span class="pln">getInstance</span><span class="pun">().</span><span class="pln">getReference</span><span class="pun">(</span><span class="str" style="color:#0D904F;">".info/serverTimeOffset"</span><span class="pun">);</span><span class="pln"> offsetRef</span><span class="pun">.</span><span class="pln">addValueEventListener</span><span class="pun">(</span><span class="kwd" style="color:#3B78E7;">new</span><span class="pln"> </span><span class="typ" style="color:#9C27B0;">ValueEventListener</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> &nbsp; </span><span class="lit" style="color:#C53929;">@Override</span><span class="pln"> &nbsp; </span><span class="kwd" style="color:#3B78E7;">public</span><span class="pln"> </span><span class="kwd" style="color:#3B78E7;">void</span><span class="pln"> onDataChange</span><span class="pun">(</span><span class="typ" style="color:#9C27B0;">DataSnapshot</span><span class="pln"> snapshot</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> &nbsp; &nbsp; </span><span class="kwd" style="color:#3B78E7;">double</span><span class="pln"> offset </span><span class="pun">=</span><span class="pln"> snapshot</span><span class="pun">.</span><span class="pln">getValue</span><span class="pun">(</span><span class="typ" style="color:#9C27B0;">Double</span><span class="pun">.</span><span class="kwd" style="color:#3B78E7;">class</span><span class="pun">);</span><span class="pln"> &nbsp; &nbsp; </span><span class="kwd" style="color:#3B78E7;">double</span><span class="pln"> estimatedServerTimeMs </span><span class="pun">=</span><span class="pln"> </span><span class="typ" style="color:#9C27B0;">System</span><span class="pun">.</span><span class="pln">currentTimeMillis</span><span class="pun">()</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> offset</span><span class="pun">;</span><span class="pln"> &nbsp; </span><span class="pun">}</span><span class="pln"> &nbsp; </span><span class="lit" style="color:#C53929;">@Override</span><span class="pln"> &nbsp; </span><span class="kwd" style="color:#3B78E7;">public</span><span class="pln"> </span><span class="kwd" style="color:#3B78E7;">void</span><span class="pln"> onCancelled</span><span class="pun">(</span><span class="typ" style="color:#9C27B0;">DatabaseError</span><span class="pln"> error</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> &nbsp; &nbsp; </span><span class="typ" style="color:#9C27B0;">System</span><span class="pun">.</span><span class="pln">err</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="str" style="color:#0D904F;">"Listener was cancelled"</span><span class="pun">);</span><span class="pln"> &nbsp; </span><span class="pun">}</span><span class="pln"> </span><span class="pun">});</span></pre>
+<h2 style="font-size:24px;color:#212121;">
+    Sample Presence App
+</h2>
+<pre class="prettyprint"><span class="com" style="color:#D81B60;">// since I can connect from multiple devices, we store each connection instance separately</span><span class="pln"> </span><span class="com" style="color:#D81B60;">// any time that connectionsRef's value is null (i.e. has no children) I am offline</span><span class="pln"> </span><span class="kwd" style="color:#3B78E7;">final</span><span class="pln"> </span><span class="typ" style="color:#9C27B0;">FirebaseDatabase</span><span class="pln"> database </span><span class="pun">=</span><span class="pln"> </span><span class="typ" style="color:#9C27B0;">FirebaseDatabase</span><span class="pun">.</span><span class="pln">getInstance</span><span class="pun">();</span><span class="pln"> </span><span class="kwd" style="color:#3B78E7;">final</span><span class="pln"> </span><span class="typ" style="color:#9C27B0;">DatabaseReference</span><span class="pln"> myConnectionsRef </span><span class="pun">=</span><span class="pln"> database</span><span class="pun">.</span><span class="pln">getReference</span><span class="pun">(</span><span class="str" style="color:#0D904F;">"users/joe/connections"</span><span class="pun">);</span><span class="pln"> </span><span class="com" style="color:#D81B60;">// stores the timestamp of my last disconnect (the last time I was seen online)</span><span class="pln"> </span><span class="kwd" style="color:#3B78E7;">final</span><span class="pln"> </span><span class="typ" style="color:#9C27B0;">DatabaseReference</span><span class="pln"> lastOnlineRef </span><span class="pun">=</span><span class="pln"> database</span><span class="pun">.</span><span class="pln">getReference</span><span class="pun">(</span><span class="str" style="color:#0D904F;">"/users/joe/lastOnline"</span><span class="pun">);</span><span class="pln"> </span><span class="kwd" style="color:#3B78E7;">final</span><span class="pln"> </span><span class="typ" style="color:#9C27B0;">DatabaseReference</span><span class="pln"> connectedRef </span><span class="pun">=</span><span class="pln"> database</span><span class="pun">.</span><span class="pln">getReference</span><span class="pun">(</span><span class="str" style="color:#0D904F;">".info/connected"</span><span class="pun">);</span><span class="pln"> connectedRef</span><span class="pun">.</span><span class="pln">addValueEventListener</span><span class="pun">(</span><span class="kwd" style="color:#3B78E7;">new</span><span class="pln"> </span><span class="typ" style="color:#9C27B0;">ValueEventListener</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> &nbsp; </span><span class="lit" style="color:#C53929;">@Override</span><span class="pln"> &nbsp; </span><span class="kwd" style="color:#3B78E7;">public</span><span class="pln"> </span><span class="kwd" style="color:#3B78E7;">void</span><span class="pln"> onDataChange</span><span class="pun">(</span><span class="typ" style="color:#9C27B0;">DataSnapshot</span><span class="pln"> snapshot</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> &nbsp; &nbsp; </span><span class="kwd" style="color:#3B78E7;">boolean</span><span class="pln"> connected </span><span class="pun">=</span><span class="pln"> snapshot</span><span class="pun">.</span><span class="pln">getValue</span><span class="pun">(</span><span class="typ" style="color:#9C27B0;">Boolean</span><span class="pun">.</span><span class="kwd" style="color:#3B78E7;">class</span><span class="pun">);</span><span class="pln"> &nbsp; &nbsp; </span><span class="kwd" style="color:#3B78E7;">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">connected</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> &nbsp; &nbsp; &nbsp; </span><span class="com" style="color:#D81B60;">// add this device to my connections list</span><span class="pln"> &nbsp; &nbsp; &nbsp; </span><span class="com" style="color:#D81B60;">// this value could contain info about the device or a timestamp too</span><span class="pln"> &nbsp; &nbsp; &nbsp; </span><span class="typ" style="color:#9C27B0;">DatabaseReference</span><span class="pln"> con </span><span class="pun">=</span><span class="pln"> myConnectionsRef</span><span class="pun">.</span><span class="pln">push</span><span class="pun">();</span><span class="pln"> &nbsp; &nbsp; &nbsp; con</span><span class="pun">.</span><span class="pln">setValue</span><span class="pun">(</span><span class="typ" style="color:#9C27B0;">Boolean</span><span class="pun">.</span><span class="pln">TRUE</span><span class="pun">);</span><span class="pln"> &nbsp; &nbsp; &nbsp; </span><span class="com" style="color:#D81B60;">// when this device disconnects, remove it</span><span class="pln"> &nbsp; &nbsp; &nbsp; con</span><span class="pun">.</span><span class="pln">onDisconnect</span><span class="pun">().</span><span class="pln">removeValue</span><span class="pun">();</span><span class="pln"> &nbsp; &nbsp; &nbsp; </span><span class="com" style="color:#D81B60;">// when I disconnect, update the last time I was seen online</span><span class="pln"> &nbsp; &nbsp; &nbsp; lastOnlineRef</span><span class="pun">.</span><span class="pln">onDisconnect</span><span class="pun">().</span><span class="pln">setValue</span><span class="pun">(</span><span class="typ" style="color:#9C27B0;">ServerValue</span><span class="pun">.</span><span class="pln">TIMESTAMP</span><span class="pun">);</span><span class="pln"> &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"> &nbsp; </span><span class="pun">}</span><span class="pln"> &nbsp; </span><span class="lit" style="color:#C53929;">@Override</span><span class="pln"> &nbsp; </span><span class="kwd" style="color:#3B78E7;">public</span><span class="pln"> </span><span class="kwd" style="color:#3B78E7;">void</span><span class="pln"> onCancelled</span><span class="pun">(</span><span class="typ" style="color:#9C27B0;">DatabaseError</span><span class="pln"> error</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> &nbsp; &nbsp; </span><span class="typ" style="color:#9C27B0;">System</span><span class="pun">.</span><span class="pln">err</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="str" style="color:#0D904F;">"Listener was cancelled at .info/connected"</span><span class="pun">);</span><span class="pln"> &nbsp; </span><span class="pun">}</span><span class="pln"> </span><span class="pun">});</span></pre>
+<p style="text-align:center;">
+    <br />
+</p>
+<p>
+    <br />
+</p>
+<img src="https://mmbiz.qlogo.cn/mmbiz_png/fgnkxfGnnkTMNtGy7KWfCrdJibAYY6HtIeOpQc0iaRNeAWWoBHNsMZEFmY9TtQEfWKdwdTWLuslYLTaH9qxs4NXQ/0?" class="" style="height:auto !important;width:50px;" /><span style="color:#7F7F7F;">github源码奉上</span>
+<p style="color:#3E3E3E;">
+    <span style="font-size:15px;color:#82D0E7;">这部作品以架空都市斯特恩比尔特为舞台，由于人类间出现了被称为“NEXT”的特殊能力者，所谓的“英雄”也成为了一种职业：英雄们以这种特殊能力作为谋生手段，逮捕同样身为NEXT的罪犯，保护市民的安危。</span>
+</p>
+<p style="color:#3E3E3E;">
+    <br />
+</p>
+<p style="text-align:center;">
+    <img src="https://mmbiz.qlogo.cn/mmbiz_jpg/cZV2hRpuAPh6Q2GkiaGrjVXwxSrr1P1icS9oxm1yptEsiaUPNLr3gLJJibTgEreAu09e6amfKibJEHUp3j1tInK1IXQ/0" class="" style="height:auto !important;" />
+</p>
+<p style="text-align:center;">
+    <br />
+</p>
+<p>
+    <br />
+</p>
+<img src="https://mmbiz.qlogo.cn/mmbiz_gif/FO6AVvu3Kx2iam7T2TgIAHo7C36Ln106ItVyq6GnhMsItzuWVmVzdCGv7rU6sIAcaOWDN2Zfotn4pMP3WBgbqPw/0?wx_fmt=gif" title="分割线" style="height:auto !important;width:120px;" />
+<p>
+    <br />
+</p>
+<p>
+    <br />
+</p>
+<p>
+    <br />
+</p>
+<p>
+    <span style="color:#DC5B5E;">◉</span>
+</p>
+<p>
+    <span style="color:#DC5B5E;">●</span>
+</p>
+<p>
+    <span style="color:#DC5B5E;">◉</span>
+</p>
+<img border="0" src="https://mmbiz.qlogo.cn/mmbiz_jpg/FO6AVvu3Kx2iam7T2TgIAHo7C36Ln106IOzFKtpl07FUxrhessODEwuVMc9gsPq9fBbVcC6nroTUicib3vVLt841Q/0?wx_fmt=jpeg" height="100%" title="qrcode_for_gh_8b061ade3cca_258.jpg" width="" style="height:157px;" />
+<p>
+    <br />
+</p>
+</p>
