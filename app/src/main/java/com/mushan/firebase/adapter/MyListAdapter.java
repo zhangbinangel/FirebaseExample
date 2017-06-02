@@ -121,7 +121,7 @@ public class MyListAdapter extends BaseAdapter{
         message.setText(entity.getMessage());
         title.setText(entity.getTitle());
 
-        String img = String.valueOf(Math.random()*5/1);
+        String img = String.valueOf((int)(Math.random()*5)+1);
         Bitmap bitmap = Tools.getImageView(mContext,img+".webp");
         imageView.setImageBitmap(bitmap);
         return view;
