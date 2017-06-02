@@ -7,5 +7,8 @@
     <string name="cancel">取消</string>
     <string name="send">发送</string>
     <string name="title">创建</string>
-    <string name="hint">写评论...</string>
+    <string name="input_title">请输入标题</string>
+    <string name="input_message">请输入提要</string>
+    <string name="input_url">请输入网址</string>
+
 </resources>

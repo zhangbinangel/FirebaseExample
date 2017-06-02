@@ -6,8 +6,9 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent">
     <EditText
+        android:id="@+id/message"
         android:background="@null"
-        android:hint="step_three"
+        android:hint="@string/input_url"
         android:layout_width="377dp"
         android:layout_height="match_parent"
         android:layout_marginStart="8dp"
@@ -16,7 +17,6 @@
         android:layout_marginBottom="8dp"
         android:layout_marginTop="0dp"
         app:layout_constraintTop_toBottomOf="@+id/view"
-        android:gravity="top"
         app:layout_constraintVertical_bias="1.0"
         tools:layout_editor_absoluteX="0dp"/>
 

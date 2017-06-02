@@ -17,6 +17,8 @@ import com.mushan.firebase.entity.BlogSimpleEntity;
 import com.mushan.firebase.utls.Tools;
 
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 
 /**
  * Created by ZhangBin on 17/5/31.
@@ -33,8 +35,6 @@ public class MyListAdapter extends BaseAdapter{
         this.mDataList = list;
         this.mContext = context;
         mAdRequest = new AdRequest.Builder()
-                /*.addTestDevice(AdRequest.DEVICE_ID_EMULATOR)*/
-                .addTestDevice("BB2011217CD316B7429C42FAEB1F15F1")
                 .build();
 
     }
@@ -131,7 +131,13 @@ public class MyListAdapter extends BaseAdapter{
         @Override
         public void onAdLoaded() {
             super.onAdLoaded();
-            mNativeAdView.loadAd(mAdRequest);
+            new Timer().schedule(new TimerTask() {
+                @Override
+                public void run() {
+                    mNativeAdView.loadAd(mAdRequest);
+                }
+            },5000);
+
         }
     };
     @Override

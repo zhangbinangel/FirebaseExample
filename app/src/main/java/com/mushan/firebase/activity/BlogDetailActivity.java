@@ -34,8 +34,6 @@ public class BlogDetailActivity extends Activity{
         setContentView(R.layout.blog_detail);
         mAdView = (AdView) findViewById(R.id.ad_view);
         mAdRequest = new AdRequest.Builder()
-                /*.addTestDevice(AdRequest.DEVICE_ID_EMULATOR)*/
-                .addTestDevice("BB2011217CD316B7429C42FAEB1F15F1")
                 .build();
         mAdView.loadAd(mAdRequest);
 
