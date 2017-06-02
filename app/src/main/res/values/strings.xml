@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">FirebaseExample</string>
+    <string name="app_Id">ca-app-pub-6565118233675959~7449853422</string>
     <string name="banner_ad_unitId">ca-app-pub-6565118233675959/8926586627</string>
-    <string name="native_ad_unitId">ca-app-pub-6565118233675959/3934323821</string>
+    <string name="native_ad_unitId">ca-app-pub-6565118233675959/2926765420</string>
     <string name="show_banner">显示横幅</string>
 </resources>
