@@ -3,7 +3,6 @@ package com.mushan.firebase.adapter;
 import android.content.Context;
 import android.database.DataSetObserver;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -15,8 +14,8 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.NativeExpressAdView;
 import com.mushan.firebase.R;
 import com.mushan.firebase.entity.BlogSimpleEntity;
+import com.mushan.firebase.utls.Tools;
 
-import java.io.IOException;
 import java.util.List;
 
 /**
@@ -34,6 +33,8 @@ public class MyListAdapter extends BaseAdapter{
         this.mDataList = list;
         this.mContext = context;
         mAdRequest = new AdRequest.Builder()
+                /*.addTestDevice(AdRequest.DEVICE_ID_EMULATOR)*/
+                .addTestDevice("BB2011217CD316B7429C42FAEB1F15F1")
                 .build();
 
     }
@@ -78,59 +79,51 @@ public class MyListAdapter extends BaseAdapter{
 
         if (entity.getType().toString().equals(BlogSimpleEntity.Type.AD.toString())) {
 
-            view = View.inflate(mContext,
-                    R.layout.blog_list_item2,
-                    null);
-
-            holder = new ViewHolder2();
-            ((ViewHolder2) holder).nativeAdView = (NativeExpressAdView) view.findViewById(R.id.nativeAdView);
-            mNativeAdView = ((ViewHolder2) holder).nativeAdView;
-            mNativeAdView.loadAd(mAdRequest);
-            mNativeAdView.setAdListener(mAdListener);
-            //view.setTag(holder);
+            view = getViewAd(position);
         }
-        else
-        {
-            view = View.inflate(mContext,
-                    R.layout.blog_list_item,
-                    null);
-
-            holder = new ViewHolder();
-            ((ViewHolder) holder).message = (TextView) view.findViewById(R.id.message);
-            ((ViewHolder) holder).title = (TextView) view.findViewById(R.id.title);
-            ((ViewHolder) holder).imageView = (ImageView) view.findViewById(R.id.cover);
-
-            ((ViewHolder)holder).message.setText(mDataList.get(position).getMessage());
-            ((ViewHolder)holder).title.setText(mDataList.get(position).getTitle());
-            Bitmap bitmap = getImageView();
-            ((ViewHolder)holder).imageView.setImageBitmap(bitmap);
-
-            //view.setTag(holder);
+        else {
+            view = getViewBlog(position);
         }
 
+        return view;
+    }
 
+    private View getViewAd(int position)
+    {
+        View view = View.inflate(mContext,
+                R.layout.blog_list_item2,
+                null);
 
-        /*{
-            view = convertView;
-            if(entity.getType().toString().equals(BlogSimpleEntity.Type.AD.toString()))
-            {
-                holder = (ViewHolder2) view.getTag();
+        TextView message = (TextView)view.findViewById(R.id.message);
+        TextView title = (TextView)view.findViewById(R.id.title);
+        mNativeAdView = (NativeExpressAdView) view.findViewById(R.id.nativeAdView);
 
-                ((ViewHolder2) holder).nativeAdView.setAdListener(mAdListener);
-                ((ViewHolder2) holder).nativeAdView.loadAd(mAdRequest);
-                mNativeAdView = ((ViewHolder2) holder).nativeAdView;
-            }
-            else
-            {
+        BlogSimpleEntity entity = mDataList.get(position);
+        message.setText(entity.getMessage());
+        title.setText(entity.getTitle());
 
-                holder = (ViewHolder)view.getTag();
-                ((ViewHolder)holder).message.setText(mDataList.get(position).getMessage());
-                ((ViewHolder)holder).title.setText(mDataList.get(position).getTitle());
-                Bitmap bitmap = getImageView();
-                ((ViewHolder)holder).imageView.setImageBitmap(bitmap);
+        mNativeAdView.loadAd(mAdRequest);
+        mNativeAdView.setAdListener(mAdListener);
 
-            }
-        }*/
+        return view;
+    }
+    private View getViewBlog(int position)
+    {
+        View view = View.inflate(mContext,
+                R.layout.blog_list_item,
+                null);
+
+        TextView message = (TextView) view.findViewById(R.id.message);
+        TextView title = (TextView) view.findViewById(R.id.title);
+        ImageView imageView = (ImageView) view.findViewById(R.id.cover);
+
+        BlogSimpleEntity entity = mDataList.get(position);
+        message.setText(entity.getMessage());
+        title.setText(entity.getTitle());
+
+        String img = String.valueOf(Math.random()*5/1);
+        Bitmap bitmap = Tools.getImageView(mContext,img+".webp");
+        imageView.setImageBitmap(bitmap);
         return view;
     }
 
@@ -160,16 +153,7 @@ public class MyListAdapter extends BaseAdapter{
         return false;
     }
 
-    private Bitmap getImageView()
-    {
-        Bitmap bitmap = null;
-        try {
-            bitmap = BitmapFactory.decodeStream(mContext.getAssets().open("firebase.webp"));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return bitmap;
-    }
+
 
     private static class Holder{}
     private static class ViewHolder extends Holder{

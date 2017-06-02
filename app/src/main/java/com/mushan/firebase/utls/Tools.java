@@ -1,6 +1,10 @@
 package com.mushan.firebase.utls;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+
+import java.io.IOException;
 
 /**
  * Created by ZhangBin on 17/5/31.
@@ -21,5 +25,17 @@ public class Tools {
     public static int px2dip(Context context, float pxValue) {
         final float scale = context.getResources().getDisplayMetrics().density;
         return (int) (pxValue / scale + 0.5f);
+    }
+
+
+    public static Bitmap getImageView(Context context,String file)
+    {
+        Bitmap bitmap = null;
+        try {
+            bitmap = BitmapFactory.decodeStream(context.getAssets().open(file));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return bitmap;
     }
 }
